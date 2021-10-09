@@ -10,7 +10,7 @@
 
 
 
-The theme name for this Blog its Long Haul. is a minimal jekyll theme built with SASS / GULP / BROWSERSYNC / AUTOPREFIXER and focuses on long form blog posts. It is meant to be used as a starting point for a jekyll blog/website.
+The theme name for this Blog its Long Haul. Is a minimal jekyll theme built with SASS / GULP / BROWSERSYNC / AUTOPREFIXER and focuses on long form blog posts. It is meant to be used as a starting point for a jekyll blog/website. The designer its [@brianmaierjr](https://twitter.com/brianmaierjr).
 
-[@brianmaierjr](https://twitter.com/brianmaierjr).
 
+**leonuz**
