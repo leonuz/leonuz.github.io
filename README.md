@@ -1,7 +1,7 @@
 ![preview code](/assets/img/code.jpg)
 
-#leonuz Blog 
-##/var/log/
+# leonuz Blog 
+## /var/log/
 * syslog   (Posts)
 * auth     (About me)
 * messages (Contact me)
