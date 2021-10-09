@@ -21,7 +21,9 @@ navigation:
   - title: messages
     url: /contact
   - title: Xorg
-    url: /travel
+    url: /hobbies
+  - title: hidden
+    url: /hidden
 
 social:
   github: leonuz
