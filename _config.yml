@@ -1,0 +1,35 @@
+title: (leonuz💀)-[/var/log]
+description: Cybersecurity stuff and more..
+
+url: http://leonuz.guthub.io
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+# Header Option
+# header: large
+
+markdown: kramdown
+highlighter: rouge
+plugins: [jekyll-paginate]
+paginate: 5
+
+navigation:
+  - title: syslog
+    url: /index.html
+  - title: auth
+    url: /about
+  - title: messages
+    url: /contact
+  - title: Xorg
+    url: /travel
+
+social:
+  github: leonuz
+  twitter: idtic
+  email: uzcategui@gmail.com
+  linkedin: leonuz
+
+google_analytics: "G-X9PRXMNS15"
+
+disqus:
+    shortname: leonuz
