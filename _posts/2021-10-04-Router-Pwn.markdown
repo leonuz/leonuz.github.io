@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Router-Pwn (Writeup DEF CON Red Team Village CTF Quals)"
+title:  "Router-Pwn (Writeup DEF CON 29 Red Team Village CTF Quals 2021)"
 date:   2021-10-04
+image: rtv.png
 ---
 <a href="https://redteamvillage.io/ctf.html" target="_blank"><img src="/assets/img/cintillo.png" alt="Qries"></a>
 <p class="intro"><span class="dropcap">L</span>ast August, the qualification roud for the DEF CON 29 Red Team Village CTF took place, it was an excellent event, with very well thought challenges and an impeccable organization. One of those challenges, called "Router-Pwn" was especially interesting, because solving this challenge requires knowledge of: networking, forensics, cracking and basic fundamentals of routing with Cisco IOS. </p>
@@ -289,3 +290,5 @@ rayhan:thespecials
 Flag # 7: thespecials
 ```
 
+## To be continued
+**This challenge has a total of 13 flag**
