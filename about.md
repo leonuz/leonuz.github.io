@@ -13,11 +13,14 @@ title: whoami
   		<li>NOC/SOC</li>
   		<li>ISO/IEC27001 Information security management system (ISMS)</li>
   		<li>Network Admin, System Admin</li>
-  		<li>Manager and entrepreneur</li>
   		<li>IEEE Member since 1999</li>
   		<li>Linux Registered Users since 2004</li>
   		<li>ISOC Member since 2009 </li>
 		<li><a href="https://github.com/leonuz/CTFs" target="_blank">CTF Player</a></li>
+		<li>Manager and entrepreneur</li>
+		<li>Research and writing instincs</li>
+		<li>Teacher's disposition</ti>
+		<li>Passion for lerning</li>
   		<li>Proud husband and father of two</li>
   	</ul>
 	<figure>
