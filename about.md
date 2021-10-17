@@ -19,7 +19,7 @@ title: whoami
 		<li><a href="https://github.com/leonuz/CTFs" target="_blank">CTF Player</a></li>
 		<li>Manager and entrepreneur</li>
 		<li>Research and writing instincs</li>
-		<li>Teacher's disposition</ti>
+		<li>Teacher's disposition</li>
 		<li>Passion for lerning</li>
   		<li>Proud husband and father of two</li>
   	</ul>
