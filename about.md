@@ -7,7 +7,7 @@ title: whoami
 	<h1 class="pageTitle">About Me</h1>
 	<p class="intro">Electrical Engineer with a Master's degree in Telecommunications, specialized in Cybersecurity.</p>
 	<p>From 2001 to 2013 I was part of  <a href="https://www.internetsociety.org/news/press-releases/2008/leading-latin-american-foundation-eslared-receives-10th-annual-jonathan-b-postel-service-award-promoting-internet-latin-america/" target="_blank">ESLARED</a> instructors, training people in Cybersecurity, Wireless Networks and VoIP across Latin America and the Caribbean.</p>
-	<h2>Features</h2>
+	<h2>Hard/Soft Skill</h2>
 	<ul>
 		<li>Red Team/Blue Team</li>
   		<li>NOC/SOC</li>
