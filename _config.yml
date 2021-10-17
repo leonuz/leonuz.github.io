@@ -20,8 +20,8 @@ navigation:
     url: /about
   - title: messages
     url: /contact
-  - title: Xorg
-    url: /hobbies
+ # - title: Xorg
+ #   url: /hobbies
   - title: hidden
     url: /hidden
 
