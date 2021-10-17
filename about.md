@@ -22,6 +22,7 @@ title: whoami
 		<li>Teacher's disposition</li>
 		<li>Passion for lerning</li>
   		<li>Proud husband and father of two</li>
+		
   	</ul>
 	<figure>
         	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Qries"></a>
