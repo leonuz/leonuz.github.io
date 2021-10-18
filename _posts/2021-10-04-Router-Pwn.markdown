@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Router-Pwn (Challenge Writeup) DEF CON 29 Red Team Village CTF Quals 2021"
+title:  "Router-Pwn (Challenge Writeup) -- DEF CON 29 Red Team Village CTF Quals 2021"
 date:   2021-10-04
 image: rtv.png
 ---
