@@ -23,10 +23,17 @@ title: whoami
 		<li>Passion for lerning</li>
   		<li>Proud husband and father of two</li>
 	</ul>
-	
 	<figure>
-        	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Qries"></a>
-        	<figcaption>Jon "Maddog" Hall and Me, in WALC 2007</figcaption>
+        	<a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a>
+        	<figcaption>Credly Badges</figcaption>
+	</figure>
+	<figure>
+        	<a href="https://www.credential.net/profile/leonardouzcategui/wallet" target="_blank"><img src="/assets/img/acredible.png" alt="Acredible"></a>
+        	<figcaption>Acredible Badges</figcaption>
+	</figure>
+	<figure>
+        	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Maddog"></a>
+        	<figcaption>Jon "Maddog" Hall</figcaption>
 	</figure>
 
 </div>
