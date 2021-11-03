@@ -23,19 +23,20 @@ title: whoami
 		<li>Passion for lerning</li>
   		<li>Proud husband and father of two</li>
 	</ul>
-	<h2>Some Badges</h2>
+	<h3>Some Badges</h3>
+	
 <table class="center">  
 	<tr>  
     		<th>Badge Container</th>
-    		<th>link</th>
+    		<th></th>
   	</tr>  
 	<tr>  
-    		<td>Acredible Badges</td>
-    		<td><a href="https://www.credential.net/profile/leonardouzcategui/wallet" target="_blank"><img src="/assets/img/acredible.png" alt="Acredible"></a></td>
+    		<td style="text-align:center">Acredible Badges</td>
+    		<td style="text-align:center"><a href="https://www.credential.net/profile/leonardouzcategui/wallet" target="_blank"><img src="/assets/img/acredible.png" alt="Acredible"></a></td>
   	</tr>  
  	<tr>  
-    		<td>Credly Badges</td>
-    		<td><a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
+    		<td style="text-align:center">Credly Badges</td>
+    		<td style="text-align:center"><a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
   	</tr>  
 </table>    
 	<figure>
