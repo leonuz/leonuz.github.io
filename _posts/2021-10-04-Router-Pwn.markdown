@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Router-Pwn (Challenge Writeup) -- DEF CON 29 Red Team Village CTF Quals 2021"
+title:  "Router-Pwn (Challenge Writeup) -- DEFCON 29 Red Team Village CTF Quals 2021"
 date:   2021-10-04
 image: rtv.png
 ---
 <a href="https://redteamvillage.io/ctf.html" target="_blank"><img src="/assets/img/cintillo.png" alt="Qries"></a>
-<p class="intro"><span class="dropcap">L</span>ast August, the qualification roud for the DEF CON 29 Red Team Village CTF took place, it was an excellent event, with very well thought challenges and an impeccable organization. One of those challenges, called "Router-Pwn" was especially interesting, because solving this challenge requires knowledge of: networking, forensics, cracking and basic fundamentals of routing with Cisco IOS. </p>
+<p class="intro"><span class="dropcap">L</span>ast August, the qualification roud for the DEFCON 29 Red Team Village CTF took place, it was an excellent event, with very well thought challenges and an impeccable organization. One of those challenges, called "Router-Pwn" was especially interesting, because solving this challenge requires knowledge of: networking, forensics, cracking and basic fundamentals of routing with Cisco IOS. </p>
 
 We were given a pcap file (download source [here](https://github.com/leonuz/CTFs/raw/main/stuff/rtr-pwneip.pcap)), which made the challenge more interesting.
 
