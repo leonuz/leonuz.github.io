@@ -40,7 +40,7 @@ title: whoami
   	</tr>
 	<tr>
 		<td style+"text-align:center">Badgr Badge</td>
-		<td style="text-align:center"><iframe src="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?embedVersion=1&amp;embedWidth=330&amp;embedHeight=191&amp;identity__email=uzcategui%40gmail.com" title="Badge: Analista SOC Nivel 1" style="width: 330px; height: 191px; border: 0px;"></iframe></td>
+		<td style="text-align:center"><a href="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?identity__email=uzcategui%40gmail.com" target="_blank"><img src="assets/img/badgr.png" alt="Badgr"</td>
 </table>    
 	<figure>
         	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Maddog"></a>
