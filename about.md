@@ -37,7 +37,10 @@ title: whoami
  	<tr>  
     		<td style="text-align:center">Credly Badges</td>
     		<td style="text-align:center"><a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
-  	</tr>  
+  	</tr>
+	<tr>
+		<td style+"text-align:center">Badgr Badge</td>
+		<td style="text-align:center"><iframe src="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?embedVersion=1&amp;embedWidth=330&amp;embedHeight=191&amp;identity__email=uzcategui%40gmail.com" title="Badge: Analista SOC Nivel 1" style="width: 330px; height: 191px; border: 0px;"></iframe></td>
 </table>    
 	<figure>
         	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Maddog"></a>
