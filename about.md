@@ -31,16 +31,16 @@ title: whoami
     		<th></th>
   	</tr>  
 	<tr>  
-    		<td style="text-align:center">Acredible Badges</td>
+    		<td style="text-align:center">Acredible</td>
     		<td style="text-align:center"><a href="https://www.credential.net/profile/leonardouzcategui/wallet" target="_blank"><img src="/assets/img/acredible.png" alt="Acredible"></a></td>
   	</tr>  
  	<tr>  
-    		<td style="text-align:center">Credly Badges</td>
+    		<td style="text-align:center">Credly</td>
     		<td style="text-align:center"><a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
   	</tr>
 	<tr>
-		<td style+"text-align:center">Badgr Badge</td>
-		<td style="text-align:center"><a href="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?identity__email=uzcategui%40gmail.com" target="_blank"><img src="assets/img/badgr.png" alt="Badgr"</td>
+		<td style+"text-align:center">Badgr</td>
+		<td style="text-align:center"><a href="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?identity__email=uzcategui%40gmail.com" target="_blank"><img src="assets/img/badgr.png" alt="Badgr"</a></td>
 
 </table>
     
