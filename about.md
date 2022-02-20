@@ -41,12 +41,9 @@ title: whoami
 	<tr>
 		<td style="text-align:center">Badgr</td>
 		<td style="text-align:center"><a href="https://api.badgr.io/public/assertions/6eQ4G5z3Tii6u3vIwBakTw?identity__email=uzcategui%40gmail.com" target="_blank"><img src="/assets/img/badgr.png" alt="Badgr"></a></td>
-
 </table>
-    
 	<figure>
         	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Maddog"></a>
         	<figcaption>Jon "Maddog" Hall</figcaption>  
 	</figure>  
-	
 </div>
