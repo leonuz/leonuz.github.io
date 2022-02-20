@@ -11,7 +11,7 @@ title: whoami
 	<ul>
 		<li>Red Team/Blue Team</li>
   		<li>NOC/SOC</li>
-  		<li>ISO/IEC27001 Information security management system (ISMS)</li>
+  		<li>ISO/IEC27001 Information Security Management System (ISMS)</li>
   		<li>Network Admin, System Admin</li>
   		<li>IEEE Member since 1999</li>
   		<li>Linux Registered Users since 2004</li>
