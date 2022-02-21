@@ -24,7 +24,6 @@ title: whoami
   		<li>Proud husband and father of two</li>
 	</ul>
 	<h3>Some Badges</h3>
-	
 <table class="center">  
 	<tr>  
     		<th>Badge Container</th>
@@ -45,5 +44,7 @@ title: whoami
         	<a href="https://en.wikipedia.org/wiki/Jon_Hall_(programmer)" target="_blank"><img src="/assets/img/maddog.png" alt="Maddog"></a>
         	<figcaption>Jon "Maddog" Hall</figcaption>  
 	</tr>
+</table>
+</div>	
 
 	
