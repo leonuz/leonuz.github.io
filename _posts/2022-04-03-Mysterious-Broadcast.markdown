@@ -91,7 +91,7 @@ This result looks like a base64 encoding, we decode it in the following way
 shctf{AsciiIsA7BitStandard}
 ```
 
-We have the challenge flag!
+**<center>The flag for the challenge is: shctf{AsciiIsA7BitStandard}</center>**
 
 - - -
 
