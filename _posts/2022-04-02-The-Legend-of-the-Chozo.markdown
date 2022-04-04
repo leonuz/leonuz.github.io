@@ -162,8 +162,8 @@ We fix the file and now its posible to open to get the flag.
         <figcaption>flag</figcaption>
 </figure>
 
-**<center>The flag for the challenge is: shctf{CH0Z0_rU1N5}</center>**
-
+<center>The flag for the challenge is:</center>
+**<center>shctf{CH0Z0_rU1N5}</center>**
 - - -  
 
 ### Final Notes.
