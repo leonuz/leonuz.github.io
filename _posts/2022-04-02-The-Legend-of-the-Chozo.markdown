@@ -175,6 +175,9 @@ thanks, [FITSEC Team](https://floridatech.campuslabs.com/engage/organization/fit
 
 For fun and knowledge, always think out of the box! :)
 
+<figure>
+        <img src="/assets/img/score.png" alt="" />
+</figure>
 
 
 ---
