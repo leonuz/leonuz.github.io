@@ -173,8 +173,10 @@ $
 [*] Closed connection to 0.cloud.chals.io port 20712
                                                                                                                                                                                             
 ```
-<center>flag for "Vader" Challenge is inside of flag.txt and is: **shctf{th3r3-1s-n0-try}**</center>
-<center>flag for "Rule of two" Challenge is inside of sith.txt and is **shctf{W1th0ut-str1f3-ur-v1ctory-has-no-m3an1ng}**</center>
+<center>flag for "Vader" Challenge is inside of flag.txt:</center>
+**<center>shctf{th3r3-1s-n0-try}</center>**
+<center>flag for "Rule of two" Challenge is inside of sith.txt: </center>
+**<center>shctf{W1th0ut-str1f3-ur-v1ctory-has-no-m3an1ng}</center>**
 
 ---
 
