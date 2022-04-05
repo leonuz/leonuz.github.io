@@ -4,7 +4,7 @@ title:  "The Legend of the Chozo (Forensic Challenge Writeup) -- Space Heroes CT
 date:   2022-04-02
 image: spaceheroes.png
 ---
-<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://floridatech.campuslabs.com/engage/organization/fitsec">Florida Tech</a> has done an excellent job preparing this CTF. This challenges have been very interesting, because it allows to demonstrate techniques used in forensic investigations for the reconstruction of files of a specific format.
+<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. This challenges have been very interesting, because it allows to demonstrate techniques used in forensic investigations for the reconstruction of files of a specific format.
 </p>
 
 File recovery is one of the stages in computer forensic investigative process to identify an acquired file to be used as digital evident. The recovery is performed on files that have been deleted from a file system or intentionally destroyed/modified.
@@ -171,7 +171,7 @@ We fix the file and now its posible to open to get the flag.
 All incident response teams should know the necessary techniques for file reconstruction as well as at least, know the [NIST](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-86.pdf) recommendations.
 
 
-thanks, [FITSEC Team](https://floridatech.campuslabs.com/engage/organization/fitsec) for the excellent CTF.
+Thanks [FITSEC Team](https://research.fit.edu/fitsec/) for the excellent CTF.
 
 For fun and knowledge, always think out of the box! :)
 
