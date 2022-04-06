@@ -4,7 +4,7 @@ title:  "Vader and Rule of Two (PWN Challenge Writeup) -- Space Heroes CTF 2022"
 date:   2022-04-04
 image: spaceheroes.png
 ---
-<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. These two challenges have one thing in common and that is that they can be solved using automated tools! This is a UNINTENDED Solution.</p>
+<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. These two challenges have one thing in common and that is that they can be solved using automated tools! <strong>This is a UNINTENDED Solution.</strong></p>
 
 
 ### This is a UNINTENDED Solution for this two challenges.
