@@ -6,7 +6,7 @@ image: spaceheroes.png
 ---
 <p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. The challenges have been very interesting, we chose this web challenge for the writeup because it is quite new and entertaining for us.</p>
 
-I know, I know, there are other more elegant and faster ways... But it's Linux .... and Bash...
+I know, I know, there are other more elegant and faster ways...
 
 Challenge Description: 
 
