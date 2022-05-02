@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "OTP Vault (Mobile Challenge Writeup) -- Nahamcon CTF 2022"
-date:   2022-04-04
+date:   2022-05-04
 image: nahamcon.png
 ---
 <p class="intro"><span class="dropcap">N</span>ahamCom 2022 is a free virtual security conference Hosted by <a href="https://twitter.com/STOKFredrik">STOK</a>, <a href="https://twitter.com/_johnhammond">John Hammond</a> and <a href="https://twitter.com/NahamSec">NahamSec</a></p>
