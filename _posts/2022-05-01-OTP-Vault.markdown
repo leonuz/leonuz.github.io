@@ -1,0 +1,105 @@
+---
+layout: post
+title:  "OTP Vault (Mobile Challenge Writeup) -- Nahamcon CTF 2022"
+date:   2022-04-04
+image: nahamcon.png
+---
+<p class="intro"><span class="dropcap">N</span>ahamCom 2022 is a free virtual security conference Hosted by <a href="https://twitter.com/STOKFredrik">STOK</a>, <a href="https://twitter.com/_johnhammond">John Hammond</a> and <a href="https://twitter.com/NahamSec">NahamSec</a></p>
+
+
+Challenges Description:
+
+<figure>
+        <img src="/assets/img/nahamcon22/chall.png" alt="" />
+        <figcaption>Mobile Challenges</figcaption>
+</figure>
+
+We were given a file to download ([source here](https://github.com/leonuz/CTFs/raw/main/stuff/OTPVault.apk))
+
+We use [apktool](https://ibotpeaches.github.io/Apktool/) to reverse engineering the APK file.
+
+```bash
+┌──(leonuz㉿sniper)-[~/CTFs/NahamCon2022/Mobile]
+└─$ apktool d -f OTPVault.apk
+I: Using Apktool 2.5.0-dirty on OTPVault.apk
+I: Loading resource table...
+I: Decoding AndroidManifest.xml with resources...
+I: Loading resource table from file: /home/leonuz/.local/share/apktool/framework/1.apk
+I: Regular manifest package...
+I: Decoding file-resources...
+I: Decoding values */* XMLs...
+I: Baksmaling classes.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+
+┌──(leonuz㉿sniper)-[~/CTFs/NahamCon2022/Mobile]
+└─$ cd OTPVault
+
+┌──(leonuz㉿sniper)-[~/CTFs/NahamCon2022/Mobile/OTPVault]
+└─$ ls
+AndroidManifest.xml  apktool.yml  assets  kotlin  lib  original  res  smali  unknown
+
+ ```
+
+We do a complete search for keywords (nctf, flag, etc.) inside the new directory, and we get inside the `assets` directory this particular file `index.android.bundle`. It took us a while to go through this code, but near the end of the file we got this function. 
+
+
+```javascript
+REDACTED.....
+function O(){var n;(0,e.default)(this,O);for(var o=arguments.length,u=new Array(o),l=0;l<o;l++)u[l]=arguments[l];return(n=b.call.apply(b,[this].concat(u))).state={output:'Insert your OTP to unlock your vault',text:''},n.s='JJ2XG5CIMFRWW2LOM4',n.url='http://congon4tor.com:7777',n.token='652W8NxdsHFTorqLXgo=',n.getFlag=function(){var e,o;return t.default.async(function(u){for(;;)switch(u.prev=u.next){case 0:return u.prev=0,e={headers:{Authorization:'Bearer KMGQ0YTYgIMTk5Mjc2NzZY4OMjJlNzAC0WU2DgiYzE41ZDwN'}},u.next=4,t.default.awrap(p.default.get(n.url+"/flag",e));case 4:o=u.sent,n.setState({output:o.data.flag}),u.next=12;break;case 8:u.prev=8,u.t0=u.catch(0),console.log(u.t0),n.setState({output:'An error occurred getting the flag'});
+REDACTED.....                                                                                                                                      
+```
+we use this [JavaScript Beutifier](https://javascriptbeautifier.org/) to read that part of the code
+
+```javascript
+function O() {
+    var n;
+    (0, e.default)(this, O);
+    for (var o = arguments.length, u = new Array(o), l = 0; l < o; l++) u[l] = arguments[l];
+    return (n = b.call.apply(b, [this].concat(u))).state = {
+            output: 'Insert your OTP to unlock your vault',
+            text: ''
+        }, n.s = 'JJ2XG5CIMFRWW2LOM4', n.url = 'http://congon4tor.com:7777', n.token = '652W8NxdsHFTorqLXgo=', n.getFlag = function() {
+            var e, o;
+            return t.default.async(function(u) {
+                        for (;;) switch (u.prev = u.next) {
+                                case 0:
+                                    return u.prev = 0, e = {
+                                        headers: {
+                                            Authorization: 'Bearer KMGQ0YTYgIMTk5Mjc2NzZY4OMjJlNzAC0WU2DgiYzE41ZDwN'
+                                        }
+                                    }, u.next = 4, t.default.awrap(p.default.get(n.url + "/flag", e));
+                                case 4:
+                                    o = u.sent, n.setState({
+                                        output: o.data.flag
+                                    }), u.next = 12;
+                                    break;
+                                case 8:
+                                    u.prev = 8, u.t0 = u.catch(0), console.log(u.t0), n.setState({
+                                        output: 'An error occurred getting the flag'
+                                    });
+
+```
+
+Everything looks like the flag is obtained from the web server that uses the basic bearer authorization.  
+We then proceed to build a request with curl.  
+
+```bash
+┌──(leonuz㉿sniper)-[~/CTFs/NahamCon2022/Mobile/OTPVault]
+└─$ curl -H "Content-Type: application/json" -H "Authorization: Bearer KMGQ0YTYgIMTk5Mjc2NzZY4OMjJlNzAC0WU2DgiYzE41ZDwN" -X GET http://congon4tor.com:7777/flag
+{"flag":"flag{5450384e093a0444e6d3d39795dd7ddd}"}
+```
+And we get the flag!
+
+- - -
+
+Thanks [NahamCon](https://www.nahamcon.com/) for the excellent CTF.
+
+For fun and knowledge, always think out of the box! :)
+
+<figure>
+        <img src="/assets/img/nahamcon22/cert.png" alt="" />
+</figure>
+
+---
