@@ -6,6 +6,7 @@ image:  /nahamcon22/nahamcon.png
 ---
 <p class="intro"><span class="dropcap">N</span>ahamCom 2022 was a free virtual security conference Hosted by <a href="https://twitter.com/STOKFredrik">STOK</a>, <a href="https://twitter.com/_johnhammond">John Hammond</a> and <a href="https://twitter.com/NahamSec">NahamSec</a>. Very good experience with all possible challenge categories, nice challenge and very good infrastructure and support through the discord channel.</p>  
 
+In this opportunity we will solve a challenge of the Mobile (Android) category which is called OTP Vault.  
 
 Challenges Description:
 
