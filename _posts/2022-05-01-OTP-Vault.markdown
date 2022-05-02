@@ -43,7 +43,7 @@ AndroidManifest.xml  apktool.yml  assets  kotlin  lib  original  res  smali  unk
 
  ```
 
-We do a complete search for keywords (nctf, flag, etc.) inside the new directory, and we get inside the `assets` directory this particular file `index.android.bundle`. It took us a while to go through this code, but near the end of the file we got this function. 
+We do a complete search for keyword "flag" inside the new directory, and we get inside the `assets` directory this particular file `index.android.bundle`. It took us a while to go through this code, but near the end of the file we got this function. 
 
 
 ```javascript
