@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "That’s Not My Name (Forensic Challenge Writeup) — DownUnderCTF 2021."
+title:  "That’s Not My Name (Forensic Challenge Writeup)-- DownUnderCTF 2021."
 date:   2021-09-30
 image: downunder.png
 ---

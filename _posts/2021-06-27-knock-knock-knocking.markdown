@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Knock knock knocking on shuttles door (Challenge Writeup)— Hacky Holidays Space Race 2021 CTF.
+title:  Knock knock knocking on shuttles door (Challenge Writeup)-- Hacky Holidays Space Race 2021 CTF.
 date:   2021-06-27
 image: deloite1.png
 ---
