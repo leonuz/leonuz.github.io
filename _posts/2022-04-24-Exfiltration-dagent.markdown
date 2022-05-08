@@ -34,17 +34,17 @@ After decoding "from HEX", cybercheff detects a ZIP file, we proceed to download
 
 the file was encrypted, we use [fcrackzip](https://github.com/hyc/fcrackzip) to crack the file.
 
-```bash
+{%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~/Midnightflag/networking/Exfiltration_dAgent]
 └─$ fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt chall.zip
 
-
 PASSWORD FOUND!!!!: pw == G3ars0fwar
-```
+{%- endhighlight -%}  
+
 After a few minutes, we find the password!  
 then we open the zip file using that password...
 
-```bash
+{%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~/Midnightflag/networking/Exfiltration_dAgent]
 └─$ 7z x download.zip
 
@@ -66,14 +66,15 @@ Everything is Ok
 
 Size:       28
 Compressed: 190
-```
+{%- endhighlight -%}  
+
 and finally, we have the flag inside the txt file!!
 
-```bash
+{%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~/Midnightflag/networking/Exfiltration_dAgent]
 └─$ cat flag.txt
 MCTF{g00d_0ld_1cmp_pr070c0l}                                             
-```
+{%- endhighlight -%}
 
 #### MCTF{g00d_0ld_1cmp_pr070c0l}     
 
