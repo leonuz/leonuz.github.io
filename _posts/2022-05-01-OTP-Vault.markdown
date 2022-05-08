@@ -90,11 +90,12 @@ We then proceed to build a request with curl.
 ┌──(leonuz㉿sniper)-[~/CTFs/NahamCon2022/Mobile/OTPVault]
 └─$ curl -H "Authorization: Bearer KMGQ0YTYgIMTk5Mjc2NzZY4OMjJlNzAC0WU2DgiYzE41ZDwN" -X GET http://congon4tor.com:7777/flag
 {"flag":"flag{5450384e093a0444e6d3d39795dd7ddd}"}
-```
-And we get the flag!
+{%- endhighlight -%}  
 
-{%- endhighlight -%}
+And we get the flag!  
 
+#### flag{5450384e093a0444e6d3d39795dd7ddd}
+---
 Thanks [NahamCon](https://www.nahamcon.com/) for the excellent CTF.
 
 For fun and knowledge, always think out of the box! :)
