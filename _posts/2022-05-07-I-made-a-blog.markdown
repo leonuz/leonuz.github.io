@@ -4,7 +4,7 @@ title:  "I made a Blog! (Web Challenge Writeup) -- EZ-CTF 2022"
 date:   2022-05-07
 image: /cafe22/cafe.png
 ---
-<p class="intro"><span class="dropcap">E</span>Z-CTF 2022 (The first CTF competition using a new and innovative platform called <a href="https://www.linkedin.com/company/ctf-cafe/">CTF Cafe</a>) took place on May 4 and 5, 2022. It was 48 hours of all kinf of challenges very well elaborated and an outstanding support from the organizers.  
+<p class="intro"><span class="dropcap">E</span>Z-CTF 2022 (The first CTF competition using a new and innovative platform called <a href="https://www.linkedin.com/company/ctf-cafe/">CTF Cafe</a>) took place on May 4 and 5, 2022. It was 48 hours of all kinds of well-crafted challenges and exceptional support from the organizers.  
 We chose this WEB challenge for the writeup as we can show one of the most common exploitation techniques widely used all over the world.</p>
 
 
