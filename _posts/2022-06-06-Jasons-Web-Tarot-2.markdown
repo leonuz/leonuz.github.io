@@ -4,7 +4,7 @@ title:  "Jason's Web Tarot 2 (Web Challenge Writeup) -- BCACTF 3.0 2022"
 date:   2022-06-06
 image: /bcactf22/logo.png
 ---
-<p class="intro"><span class="dropcap">B</span>CACTF 2022 <a href="https://www.linkedin.com/company/ctf-cafe/">CTF Cafe</a>) took place on June 3 to 6, 2022. It was 72 hours of challenges and exceptional support from the organizers.  
+<p class="intro"><span class="dropcap">B</span>CACTF 2022 took place on June 3 to 6, 2022. It was 72 hours of challenges and exceptional support from the organizers.  
 We chose this WEB challenge for the writeup because it's a very good practical example of why it is necessary to use a good shared-key in all applications.</p>
 
 
