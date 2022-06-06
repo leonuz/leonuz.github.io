@@ -58,10 +58,10 @@ We can see that the token uses *HS256* as a Signing Algorithm
 #### HS256  
 Hash-based Message Authentication Code (HMAC) is an algorithm that combines a certain payload with a secret using a cryptographic hash function like SHA-256. The result is a code that can be used to verify a message only if both the generating and verifying parties know the secret. In other words, HMACs allow messages to be verified through shared secrets.
 
-*At this point we will assume that the key used for the JWT signature is very weak and therefore it is possible to crack the JWT key.*
+*At this point we will assume that the key used for the JWT signature is very weak and therefore it is possible to crack it.*
 
 ### Brute Forcing a HS256 JSON Web Token
-As secure as HS256 is, especially when implemented the right way, brute-forcing a JSON web token signed with small and medium sized shared-secrets using HS256 is still very possible.
+As secure as HS256 is, especially when implemented the right way, brute-forcing a JSON Web Token signed with small and medium sized shared-secrets using HS256 is still very possible.
 
 Using [Jonh the Ripper](https://www.openwall.com/john/) (or any other tools) we can find the secret key of a HS256 JSON Web token.
 
