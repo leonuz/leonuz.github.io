@@ -5,7 +5,7 @@ date:   2022-06-06
 image: /bcactf22/logo.png
 ---
 <p class="intro"><span class="dropcap">B</span>CACTF 2022 <a href="https://www.linkedin.com/company/ctf-cafe/">CTF Cafe</a>) took place on June 3 to 6, 2022. It was 72 hours of challenges and exceptional support from the organizers.  
-We chose this WEB challenge for the writeup because its a .</p>
+We chose this WEB challenge for the writeup because it's a very good practical example of why it is necessary to use a good shared-key in all applications.</p>
 
 
 #### Challenge Description: 
@@ -132,7 +132,9 @@ And we get the flag!
 - - -
 ## Final Notes.  
 
-Many developers are unaware of the importance of knowing the guidelines of the protocols they implement, The JSON Web Algorithms (JWA) defined in [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518) in statement 3.2 tells us: ` A key of the same size as the hash output (for instance, 256 bits for "HS256") or larger MUST be used with this algorithm` 
+Many developers are unaware of the importance of knowing the guidelines of the protocols they implement, The JSON Web Algorithms (JWA) defined in [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518) in statement 3.2 tells us: A key of the same size as the hash output (for instance, 256 bits for "HS256") or larger MUST be used with this algorithm. 
+As a rule, make sure to pick a shared-key as long as the length of the hash. 
+For HS256 that would be a 256-bit key (or 32 bytes) minimum!!
 
 
 - - -
