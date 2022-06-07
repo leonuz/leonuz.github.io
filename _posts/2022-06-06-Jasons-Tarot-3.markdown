@@ -14,7 +14,7 @@ image: /bcactf22/logo.png
         <figcaption>Challenge Description</figcaption>
 </figure>
 
-We see that we were given three files to review: a public key certificate, a package.json and the server.js, 
+We see that we were given three files to review: a public key certificate, a package.json and the server.js
 
 We review the server.js
 
@@ -30,7 +30,7 @@ and, most important, review the package.json
         <figcaption>package.json</figcaption>
 </figure>
 
-just as we did with [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, we started loading the page with Burpsuit intercepted ON to capture the JSON Web Token (JWT) 
+Just as we did with [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, we started loading the page with Burpsuit intercepted ON to capture the JSON Web Token (JWT) 
 
 <figure>
         <img src="/assets/img/bcactf22/web.png" alt="" />
@@ -44,7 +44,7 @@ To decode the header and payload parts we use a web tool called [jwt.io](https:/
         <figcaption>jwt_io</figcaption>
 </figure>
 
-Like the [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, we need to become subscribed users to the application, to do this, we need to change (in the JWT) the value of the `"isSubscriber"` variable from its current value, `False`, to a new one, `True`. 
+Like the [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, and now clearer by the revision of script.js, we need to become subscribed users to the application, to do this, we need to change (in the JWT) the value of the `"isSubscriber"` variable from its current value, `False`, to a new one, `True` in order to obtein the flag.
 
 In the review of the package.json file, we notice that the *jsonwebtoken* version its 3.2.2, this version its outdated and vulnerable!!
 
@@ -53,7 +53,7 @@ In the review of the package.json file, we notice that the *jsonwebtoken* versio
         <figcaption>CVE-2015-9235</figcaption>
 </figure>
 
-So in order to exploit that vulnerability, we need to build a new HMAC(HS256) token using the public key as a secret to it. 
+So, in order to exploit that vulnerability, we need to build a new HMAC(HS256) token using the public key as a secret to it. 
 We used nodejs jsonwebtoken module to do this 
 
 
