@@ -30,7 +30,7 @@ and, most important, review the package.json
         <figcaption>package.json</figcaption>
 </figure>
 
-We started loading the page with Burpsuit intercepted ON to capture the JWT 
+just as we did with [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, we started loading the page with Burpsuit intercepted ON to capture the JSON Web Token (JWT) 
 
 <figure>
         <img src="/assets/img/bcactf22/web.png" alt="" />
@@ -81,7 +81,6 @@ Now we have the new JWT
         <img src="/assets/img/bcactf22/burp-req.png" alt="" />
         <figcaption>New JWT token</figcaption>
 </figure>
-
 
 Now, all that remains is to substitute the new token in the request and send the new request. 
 We use the function ["Repeatear" of Burpsuit](https://portswigger.net/burp/documentation/desktop/tools/repeater/using) to do that.
