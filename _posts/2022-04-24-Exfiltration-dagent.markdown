@@ -84,7 +84,7 @@ MCTF{g00d_0ld_1cmp_pr070c0l}
 
 
 Thanks [MidnightFlag Team](https://midnightflag.fr/) for the oportunity of a excellent CTF.  
-Give us more time for the next time please!!
+Give us more time for the next CTF please!!
 
 For fun and knowledge, always think out of the box! :)
 
