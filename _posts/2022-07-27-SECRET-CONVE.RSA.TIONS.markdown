@@ -43,7 +43,7 @@ Let's test to see if the **AI** made the same implementation mistake. For this, 
         <figcaption>Factorization  of N using factorDB</figcaption>
 </figure>
 
-Bingo! We have found that `N` is **fully factored**, so we know `p` and `q`. With these values we will determine `phi(n)` and of course `d` (the private key) which will give us access to the message encrypted by the **AI**.
+Bingo! We have found that `N` is **fully factored**, so we know `p` and `q`. With these values we will determine a [totiem function](https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf) named `phi(n)` and of course `d` (the private key) which will give us access to the message encrypted by the **AI**.
 
 
 #### Decryption Process
@@ -166,13 +166,14 @@ Compute a private exponent `d` that satisfies the congruence `ed≡1(modϕ(n))`.
 Make the public key `(n,e)` available to others. **Keep the private values d, p, q, and ϕ(n) secret.**
 
 #### RSA Encryption scheme
-Encryption rule: **ciphertext**, `c= RsaPublic(m)=memodn`, where `1<m<n−1`.
-Decryption rule: **plaintext**, `m= RsaPrivate(c)=cdmodn`.
+Encryption rule: **ciphertext**, `c = RsaPublic(m) = memodn`, where `1<m<n−1`.
+Decryption rule: **plaintext**, `m = RsaPrivate(c) = cdmodn`.
 Inverse transformation: `m = RsaPrivate(RsaPublic(m))`.
 
  
 #### More Info:  
 [RSA Cryptosystem](https://en.wikipedia.org/wiki/RSA_(cryptosystem))  
+[RSA Algorithm](https://www.di-mgt.com.au/rsa_alg.html)
 [Security of RSA](https://www.geeksforgeeks.org/security-of-rsa/)  
 [Understanding Common Factor Attacks: An RSA-Cracking Puzzle](http://www.loyalty.org/~schoen/rsa/#challenge)  
 
