@@ -173,7 +173,7 @@ Inverse transformation: `m = RsaPrivate(RsaPublic(m))`.
  
 #### More Info:  
 [RSA Cryptosystem](https://en.wikipedia.org/wiki/RSA_(cryptosystem))  
-[RSA Algorithm](https://www.di-mgt.com.au/rsa_alg.html)
+[RSA Algorithm](https://www.di-mgt.com.au/rsa_alg.html)  
 [Security of RSA](https://www.geeksforgeeks.org/security-of-rsa/)  
 [Understanding Common Factor Attacks: An RSA-Cracking Puzzle](http://www.loyalty.org/~schoen/rsa/#challenge)  
 
