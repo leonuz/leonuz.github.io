@@ -4,7 +4,7 @@ title:  "SECRET CONVE.RSA.TIONS (Crypto Writeup) -- Hacky Holidays - Unlock The 
 date:   2022-07-27
 image: /hackazon22/logo.png
 ---
-<p class="intro"><span class="dropcap">T</span>he third edition of the famous <a href="https://hackyholidays.io//">Deloitte Hacky Holidays CTF</a> competition start July 8 and finish July 26, 2022. This Year it's "Unlock the city!", It was 18 days of challenges, divided in 4 districts, 30 challenges in total, where 1242 players tried to unlock the city. Very well elaborated with an excellent platform and well thought out challengess. We chose this CRYPTO challenge for the writeup because it's a very good practical example that no matter how many resources you have, a BAD implementation of an algorithm will always be a persistent threat to you.</p>
+<p class="intro"><span class="dropcap">T</span>he third edition of the famous <a href="https://hackyholidays.io//">Deloitte Hacky Holidays CTF</a> competition start July 8 and finish July 26, 2022. This Year it's "Unlock the city!", It was 18 days of challenges, divided in 4 districts, 33 challenges in total, where 1242 active players tried to unlock the city. Very well elaborated with an excellent platform and well thought out challengess. We chose this CRYPTO challenge for the writeup because it's a very good practical example that no matter how many resources you have, a BAD implementation of an algorithm will always be a persistent threat to you.</p>
 
 
 #### Challenge Description: 
