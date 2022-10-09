@@ -1,0 +1,184 @@
+---
+layout: post
+title:  "POSTAL (Misc Challenge Writeup) -- CTF GDG Algiers 2022"
+date:   2022-10-09
+image: /gdgalgiers/logo.png
+---
+<p class="intro"><span class="dropcap">T</span>he <a href="https://www.gdgalgiers.com//">GDG Algiers</a> one of the largest community of developers and tech enthusiasts in Algeria and MENA region, has organized the first edition of the GDG Algiers CTF. Competition started October 7 and finish 48 hours later. Was a very fun and hard CTF, with some medium challenges. Very good infra and support. We chose the "misc" category challenge called "POSTAL" because its solution involves a number of specific techniques related to osint, forensics and cryptography.</p>
+
+
+#### Challenge Description: 
+
+<figure>
+        <img src="/assets/img/gdgalgiers/chall.png" alt="" />
+        <figcaption>Misc Challenge</figcaption>
+</figure>
+
+File to download ([source here](https://raw.githubusercontent.com/leonuz/CTFs/main/stuff/msg.jpg))
+
+
+We start by opening the image we were given
+
+<figure>
+        <img src="/assets/img/gdgalgiers/msg1.png" alt="" />
+        <figcaption>image from challenge</figcaption>
+</figure>
+
+We notice some strange barcodes in the upper left part of the image that catches our attention
+
+<figure>
+        <img src="/assets/img/gdgalgiers/msg2.png" alt="" />
+        <figcaption>Estrange Barcode</figcaption>
+</figure>
+
+So, after rereading the challenge, we do the search again but this time focusing on barcodes in Australia and looking for the challenge "Going Postal" from "DaVinciCTF 2022" (hint from the challenge description) we knew that the estrange barcode it's indeed an *Australia Post 4 state barcode*. 
+We find this page [AusPost](http://bobcodes.weebly.com/auspost.html) very usefull to solve this part of the challenge 
+
+Using the instructions to decode the barcode with the online tool we have this:
+
+<figure>
+        <img src="/assets/img/gdgalgiers/auspost.png" alt="" />
+        <figcaption>Barcode Decode</figcaption>
+</figure>
+
+Ok, know we have some info, but what could we do whit that?
+
+We inspect our original image (`msg.jpg`) looking for some embedded file:
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/…/ctf/gdgalgiers/misc/postal]
+└─$ stegseek --seed msg.jpg
+StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
+
+[i] Found (possible) seed: "99edcca0"
+        Plain size: 490.0 Byte(s) (compressed)
+        Encryption Algorithm: rijndael-128
+        Encryption Mode:      cbc
+{%- endhighlight -%}
+
+And we find that inside the image has a encrypted file encoded by steghide 
+
+Using the information we obtained from the [AusPost](http://bobcodes.weebly.com/auspost.html) page, specifically the "Classification Code" *(K4N64r00zz)* as passphrase, we are able to extract the file hidden inside the image
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]
+└─$ steghide extract -sf msg.jpg
+Enter passphrase:
+wrote extracted data to "Treasure.zip".
+{%- endhighlight -%}
+
+Now we have a zip file (`Treasure.zip`)  
+When inspecting the file we notice that it is encrypted.  
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]
+└─$ file Treasure.zip
+Treasure.zip: Zip archive data, at least v2.0 to extract, compression method=AES Encrypted
+{%- endhighlight -%}
+
+We need to crack it, for that we will use [Jhon the Ripper](https://www.openwall.com/john)  
+But we must first get the hash of the zip file  
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/…/gdgalgiers/misc/postal/new]
+└─$ zip2john Treasure.zip > postal.hash
+{%- endhighlight -%}
+
+and then proceed whit the crack
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/…/ctf/gdgalgiers/misc/postal]
+└─$ john --wordlist='/usr/share/wordlists/rockyou.txt' postal.hash 
+Using default input encoding: UTF-8
+Loaded 2 password hashes with 2 different salts (ZIP, WinZip [PBKDF2-SHA1 256/256 AVX2 8x])
+Loaded hashes with cost 1 (HMAC size) varying from 86 to 121
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+baltimore        (Treasure.zip/findme)     
+baltimore        (Treasure.zip/flag.txt.gpg)     
+2g 0:00:00:01 DONE (2022-10-09 15:28) 1.104g/s 6788p/s 13577c/s 13577C/s total90..hawkeye
+Use the "--show" option to display all of the cracked passwords reliably
+{%- endhighlight -%}
+
+Now we have the zip password *(baltimore)*, open the zip and we have two files
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/…/gdgalgiers/misc/postal/new]
+└─$ 7z x Treasure.zip
+
+7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,4 CPUs Intel(R) Core(TM) i5-3475S CPU @ 2.90GHz (306A9),ASM,AES-NI)
+
+Scanning the drive for archives:
+1 file, 677 bytes (1 KiB)
+
+Extracting archive: Treasure.zip
+--
+Path = Treasure.zip
+Type = zip
+Physical Size = 677
+
+
+Enter password (will not be echoed):
+Everything is Ok
+
+Files: 2
+Size:       218
+Compressed: 677
+
+┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]
+└─$ ls
+findme  flag.txt.gpg  Treasure.zip
+
+{%- endhighlight -%}
+
+Inside the file call "findme" we have a hint
+
+{%- highlight txt -%}
+┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]
+└─$ cat findme
+nice you are close
+do you know gpg....?
+I think you have the password just get back to your notes :)
+{%- endhighlight -%}
+
+Checking the information we obtained from the [AusPost](http://bobcodes.weebly.com/auspost.html) page, we have the "Sorting Code" *(78475110)* that its the password for the gpg file
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]
+└─$ gpg --output flag.txt --decrypt flag.txt.gpg 
+gpg: enabled debug flags: memstat
+gpg: AES256.CFB encrypted data
+gpg: pinentry launched (70172 gnome3 1.2.0 /dev/pts/2 xterm-256color :10.0 20600/1000/5 1000/1000 -)
+gpg: encrypted with 1 passphrase
+gpg: original file name='flag.txt'
+gpg: keydb: handles=0 locks=0 parse=0 get=0
+gpg:        build=0 update=0 insert=0 delete=0
+gpg:        reset=0 found=0 not=0 cache=0 not=0
+gpg: kid_not_found_cache: count=0 peak=0 flushes=0
+gpg: sig_cache: total=0 cached=0 good=0 bad=0
+gpg: random usage: poolsize=600 mixed=0 polls=0/0 added=0/0
+              outmix=0 getlvl1=0/0 getlvl2=0/0
+gpg: rndjent stat: collector=0x0000000000000000 calls=0 bytes=0
+gpg: secmem usage: 64/65536 bytes in 1 blocks
+{%- endhighlight -%}
+
+We have the flag!!
+
+{%- highlight bash -%}
+┌──(leonuz㉿sniperhack)-[~/…/gdgalgiers/misc/postal/new]
+└─$ cat flag.txt
+CyberErudites{4U57r4114_P057_4_57473}
+{%- endhighlight -%}
+
+### CyberErudites{4U57r4114_P057_4_57473}
+
+
+- - -
+Thanks [GDG Algiers](https://www.gdgalgiers.com/), [Shellmates Club](https://www.shellmates.club/) and CyberErudites team for the excellent job. Kudos to everyone who put the event together 
+
+For fun and knowledge, always think out of the box! :)
+
+<figure>
+        <img src="/assets/img/gdgalgiers/score.png" alt="" />
+</figure>
