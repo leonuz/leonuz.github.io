@@ -26,7 +26,7 @@ Now let's get started.
         <figcaption>Challenge 1</figcaption>
 </figure>
 
-We know for sure, that in the pcap file has some [HSRP](https://community.cisco.com/t5/networking-documents/hsrp-overview-and-basic-configuration/ta-p/3131590) comunication, and we know too that (thanks to this [twitt](https://twitter.com/_johnhammond/status/1246427342894968832?lang=en)) we can use pcap2john.py, to extract the hash for the encrypted HSRP channel and then pass it to a cracking tool (John the Ripper or Hashcat).
+We know for sure, that in the pcap file has some [HSRP](https://community.cisco.com/t5/networking-documents/hsrp-overview-and-basic-configuration/ta-p/3131590) comunication, and we know too that (thanks to this [tweet](https://twitter.com/_johnhammond/status/1246427342894968832?lang=en)) we can use pcap2john.py, to extract the hash for the encrypted HSRP channel and then pass it to a cracking tool (John the Ripper or Hashcat).
 
 {%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~/CTFs/DEFCON29_RedTeamVillage_Quals/Router-Pwn]
