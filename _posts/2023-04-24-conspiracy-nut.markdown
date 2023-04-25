@@ -14,6 +14,7 @@ image: /spaceh23/logo.png
         <figcaption>Conspiracy Nut</figcaption>
 </figure>
 
+Memory forensics is an essential type of cyber investigation that lets an investigator detect unauthorized and unusual activity on a computer or server. This involves using special software that takes a snapshot of the system’s memory and saves it as a file, also called a memory dump. The investigator can then move this file to another location and search it.
 
 Getting the clues...
 
