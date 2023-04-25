@@ -81,14 +81,14 @@ After a thorough search in all the **tinfoil** user space (Documents, AppData, P
         <figcaption>Desktop files</figcaption>
 </figure>
 
-Using the Volatility3 module called [windows.dumpfiles](https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.dumpfiles.html) we proceed to extract this file, using for this purposei, the memory address obtained in the previous step (0x17eec5670)
+Using the Volatility3 module called [windows.dumpfiles](https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.dumpfiles.html) we proceed to extract this file, using for this purpose, the memory address obtained in the previous step (0x17eec5670)
 
 <figure>
         <img src="/assets/img/spaceh23/dumpfiles.png" alt="" />
         <figcaption>windows.dumpfiles</figcaption>
 </figure>
 
-This new clue refers to a network connection,a web browser connection to http://57.135.219.202/IMG_2930.jpg  
+This new clue refers to a network connection, a web browser connection to http://57.135.219.202/IMG_2930.jpg  
 For the next step we do a [windows.netscan](https://volatility3.readthedocs.io/en/v2.0.1/volatility3.plugins.windows.netscan.html) to search for network connections to that IP address 
 
 <figure>
