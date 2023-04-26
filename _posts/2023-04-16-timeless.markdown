@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "Timeless (Web Challenge Writeup) -- JerseyCTF 2023 "
+date:   2023-04-16
+image: /jerseyctf23/logo.png
+---
+<p class="intro"><span class="dropcap">T</span>he third edition of <a href="https://www.jerseyctf.com//">JerseyCTF</a>, has arrived, offering 24 hours of pure adrenaline for over 450 participants as they tackle over 60 challenges. It's been an exhausting but excellent experience! This writeup is a basic but valuable guide to SQL injections - we hope you enjoy it. </p>
+
+#### Challenge Description: 
+
+<figure>
+        <img src="/assets/img/jerseyctf23/chall.png" alt="" />
+        <figcaption>Timeless</figcaption>
+</figure>
+
+<figure>
+        <img src="/assets/img/jerseyctf23/hint.png" alt="" />
+        <figcaption>Timeless Hint</figcaption>
+</figure>
+
+Seeing this hint in a web challenge would likely suggest that the challenge involves exploiting some kind of vulnerability in the website's authentication mechanism. The hint indicates that the challenge may involve tricking the website's database into granting access without a valid account.
+
+This could potentially involve techniques such as SQL injection, where the player would try to manipulate the SQL queries used by the website to bypass the authentication checks.
+
+<figure>
+        <img src="/assets/img/jerseyctf23/3.png" alt="" />
+        <figcaption>Vulnerable site</figcaption>
+</figure>
+
+The SQL injection vulnerability is a type of security weakness that arises when an attacker can input untrusted data into an SQL query, which then results in the execution of unintended SQL commands. In simpler terms, an attacker can manipulate the database queries by inserting malicious code into input fields that are not properly sanitized, such as login forms, search bars, and other input fields.
+
+In this challenge, if we input this string **' or 1=1 - -** in the password field, we are able to manipulate the SQL query. The - - at the end of the string is used to comment out the rest of the query, effectively rendering it useless. The 1=1 expression evaluates to true for every row in the database, so when it is combined with the OR operator, the entire WHERE clause becomes true, allowing the attacker to bypass the authentication mechanism and access the sensitive information stored in the database.
+
+To explain this further, let's consider an example scenario. Suppose a website has a login form that accepts a username and password. When a user enters their credentials, the website uses an SQL query to check if the entered credentials match the ones stored in the database. A simple query might look like this:
+
+{%- highlight sql -%}
+SELECT * FROM users WHERE username = '$username' AND password = '$password'
+{%- endhighlight -%}
+
+In this query, the $username and $password variables are placeholders for the user's input. If an attacker enters the string ' or 1=1 - - as the username, the resulting query would look like this:
+
+{%- highlight sql -%}
+SELECT * FROM users WHERE username = '' or 1=1 --' AND password = '$password'
+{%- endhighlight -%}
+
+In this modified query, the WHERE clause has been manipulated to always evaluate to true, regardless of the password entered. The double dash (- -) at the end of the string is used to comment out the rest of the query, which ensures that any additional SQL code is ignored.
+
+By exploiting this vulnerability, the attacker can gain access to the database and steal sensitive information, modify or delete data, or even take over the entire website. 
+
+<figure>
+        <img src="/assets/img/jerseyctf23/4.png" alt="" />
+        <figcaption>SQLi</figcaption>
+</figure>
+
+#### jctf{LOVE_ALL_TRUST_A_FEW_&_DO_WRONG_TO_NONE}  
+<figure>
+        <img src="/assets/img/jerseyctf23/first_blood.png" alt="" />
+        <figcaption>First Blood</figcaption>
+</figure>  
+
+Preventing SQL injection attacks requires a multi-layered approach that involves both coding best practices and security controls. Here are some steps that you can take to prevent SQL injection attacks:
+
+- Use parameterized queries or prepared statements: Instead of building SQL queries by concatenating user input with the SQL code, use parameterized queries or prepared statements, which separate the SQL code from the user input. This prevents attackers from injecting malicious SQL code into the queries.
+
+- Input validation and sanitization: Validate and sanitize all user input to ensure that it conforms to the expected format and does not contain any unexpected characters or symbols. This can be done using input validation libraries or regular expressions to ensure that only expected data is accepted.
+
+- Avoid using dynamic SQL: Whenever possible, avoid using dynamic SQL, which is SQL code that is constructed at runtime based on user input. Instead, use stored procedures or other SQL constructs that are static and can be easily secured.
+
+- Use database permissions: Restrict the privileges of the database user accounts to only what is needed for their specific tasks. This prevents attackers from using SQL injection attacks to escalate their privileges and gain full control over the database.
+
+- Implement a Web Application Firewall: A WAF can be used to detect and block SQL injection attacks before they reach the application. A WAF works by analyzing the incoming traffic and blocking any requests that contain suspicious SQL code or patterns.
+
+- Keep software up-to-date: Ensure that all software components used in the application are up-to-date with the latest security patches and fixes. This includes the database server, web server, application server, and any libraries or frameworks used by the application.
+
+By implementing these measures, you can significantly reduce the risk of SQL injection attacks on your application. However, it is important to note that no security measure is foolproof, and it is essential to continuously monitor and test your application's security posture to identify and address any vulnerabilities that may arise.
+
+- - -
+
+Congratulations to the [Jersey CTF Team](https://www.jerseyctf.com/), for their remarkable efforts in organizing this event.   
+
+Hats off to all those involved in making this event a success.
+
+For fun and knowledge, always think out of the box! :)
+
+<figure>
+        <img src="/assets/img/jerseyctf23/score.png" alt="" />
+</figure>
