@@ -158,7 +158,7 @@ We use [Foremost](https://en.wikipedia.org/wiki/Foremost_(software)) to do the f
         <figcaption>Foremost</figcaption>
 </figure>
 
-And then, inside the file 00019280.jpg we find the evidence that we need to put our "friend" in the Arkham Asylum!
+And then, opening the file 00019280.jpg we find the evidence that we need to put our "friend" in the Arkham Asylum!
 
 
 <figure>
