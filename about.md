@@ -35,7 +35,7 @@ title: whoami
   	</tr>  
  	<tr>  
     		<td style="text-align:center">Credly</td>
-    		<td style="text-align:center"><a href="https://www.credly.com/users/leonardo-uzcategui/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
+    		<td style="text-align:center"><a href="https://www.credly.com/users/leonuz/badges" target="_blank"><img src="/assets/img/credly.png" alt="Credly"></a></td>
   	</tr>
 	<tr>
 		<td style="text-align:center">Badgr</td>
