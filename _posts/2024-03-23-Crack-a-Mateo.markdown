@@ -4,7 +4,7 @@ title:  "Crack-a-Mateo (Crypto Challenge Writeup) -- JerseyCTF IV 2024 "
 date:   2024-03-23
 image: /jersey24/logo.png
 ---
-<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in it's IV edition, with a total of 65 challenges so that players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity and elegance, since many are unaware that it is possible to attack passwords using custom dictionaries, so we must be very careful with the information we share on social networks!</p>
+<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in it's IV edition, with a total of 65 challenges so that players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity and elegance, since many are unaware that it is possible to attack passwords using custom dictionaries, so we must be very careful with the information we share on social networks.</p>
 
 
 #### Challenge Description: 
@@ -21,7 +21,7 @@ This challenge had two files to download, the first one was a screenshot of a me
         <figcaption>challenge-image</figcaption>
 </figure>
 
-and the second one was an encrypted pdf file that can be downloaded ([here](https://github.com/leonuz/CTFs/raw/main/stuff/flag.pdf) 
+and the second one was an encrypted pdf file that can be downloaded ([here](https://github.com/leonuz/CTFs/raw/main/stuff/flag.pdf)) 
 
 the challenge also had a free Hint available!!!
 
