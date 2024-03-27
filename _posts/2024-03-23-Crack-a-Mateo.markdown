@@ -73,7 +73,7 @@ John was able to decrypt the hash in a short time and obtain the password with w
 
 #### jctf{IMa_7aKe_I7_PER50nA11Y}
 ---
-## NOTE:
+#### NOTE:
 As a reminder when choosing a password, I always think of this cartoon that has been published for 13 years now
 
 <figure>
