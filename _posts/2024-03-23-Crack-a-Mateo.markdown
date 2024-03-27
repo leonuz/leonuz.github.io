@@ -32,7 +32,7 @@ the challenge also had a free Hint available!!!
 
 ---
 
-After reading the description of the challenge, the message conversation, and seeing the hint, it was more than evident that it was a dictionary attack, but a dictionary attack profiled towards the target.  
+After reading the description of the challenge, the conversation of the message, and seeing the hint, it was more than evident that the solution to the problem would be to perform a dictionary attack, but a dictionary attack profiled towards the target.  
 
 There are several tools to do this but none that I know of is as easy to implement as [CUPP - Common User Passwords Profiler](https://github.com/Mebus/cupp)  
 
