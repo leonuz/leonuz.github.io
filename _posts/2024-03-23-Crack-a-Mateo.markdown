@@ -45,7 +45,7 @@ We can run our tool and generate a dictionary based on all the information obtai
         <figcaption>CUPP</figcaption>
 </figure>
 
-after a short time, it generated a dictionary with 16591 words.
+after a short time, it generated a dictionary called mateo.txt with 16592 words.
 
 then, we use pdf2john to extract the hash of the PDF so we can crack it using [John](https://www.openwall.com/john/)
 
