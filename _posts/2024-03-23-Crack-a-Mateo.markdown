@@ -42,7 +42,7 @@ We can run our tool and generate a dictionary based on all the information obtai
 
 <figure>
         <img src="/assets/img/jersey24/cupp.png" alt="" />
-        <figcaption>flag</figcaption>
+        <figcaption>CUPP</figcaption>
 </figure>
 
 after a short time, it generated a dictionary with 16591 words.
