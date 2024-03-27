@@ -4,7 +4,7 @@ title:  "Crack-a-Mateo (Crypto Challenge Writeup) -- JerseyCTF IV 2024 "
 date:   2024-03-23
 image: /jersey24/logo.png
 ---
-<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in its IV edition, with a total of 65 challenges so that more than 1600 players in more than 870 teams participated in this event, players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity and elegance since many people are unaware that it is possible to create custom unique password candidates based on personal details like birthdays and names, so we must be cautious with the information we share on social networks, and most importantly, we must know how to choose our passwords very well.</p> 
+<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in its IV edition, with a total of 65 challenges so that more than 1600 players in more than 870 teams participated in this event, players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity and elegance since many people are unaware that it is possible to create custom unique password candidates based on personal details like birthdays and names, so we must be cautious with the information we share on social networks, and most importantly, we must know how to choose our passwords very well.</p>  
 
 
 #### Challenge Description: 
@@ -32,19 +32,20 @@ the challenge also had a free Hint available!!!
 
 ---
 
-After reading the description of the challenge, the message conversation and seeing the hint, it was more than evident that it was a dictionary attack, but a dictionary attack profiled towards the target. 
+After reading the description of the challenge, the message conversation, and seeing the hint, it was more than evident that it was a dictionary attack, but a dictionary attack profiled towards the target.  
 
-There are several tools to do this but none that I know of as easy to implement as [CUPP - Common User Passwords Profiler](https://github.com/Mebus/cupp)
-CUPP, is a remarkable tool that proves to be extremely useful in actual security tasks. It serves as a powerful resource for creating personalized password guesses by profiling individuals through interactive queries. Unlike standard wordlists such as rockyou.txt, CUPP specializes in mixing personal details like birthdays and names to formulate unique password combinations commonly devised by users.
+There are several tools to do this but none that I know of is as easy to implement as [CUPP - Common User Passwords Profiler](https://github.com/Mebus/cupp)  
 
-With all the information obtained from the conversation we can run our tool and generate a dictionary based on this information.
+CUPP, is a remarkable tool that proves to be extremely useful in actual security tasks. It is a powerful resource for creating personalized password guesses by profiling individuals through interactive queries. Unlike standard wordlists such as rockyou.txt, CUPP specializes in mixing personal details like birthdays and names to formulate unique password combinations commonly devised by users.
+
+We can run our tool and generate a dictionary based on all the information obtained from the conversation.
 
 <figure>
         <img src="/assets/img/jersey24/cupp.png" alt="" />
         <figcaption>flag</figcaption>
 </figure>
 
-after a short time it generated a dictionary with 16591 words.
+after a short time, it generated a dictionary with 16591 words.
 
 then, we use pdf2john to extract the hash of the PDF so we can crack it using [John](https://www.openwall.com/john/)
 
