@@ -63,7 +63,7 @@ Use the "--show --format=PDF" options to display all of the cracked passwords re
 Session completed.
 ```
 
-John is able in a short time to crack the hash and get the password with which we were able to open the pdf.
+John was able to decrypt the hash in a short time and obtain the password with which we were able to open the PDF.
 
 <figure>
         <img src="/assets/img/jersey24/flag.png" alt="" />
