@@ -14,7 +14,7 @@ image: /jersey24/logo.png
         <figcaption>Crack-a-Mateo</figcaption>
 </figure>
 
-TThis challenge had two files to download, the first one was a screenshot of a message conversation.
+This challenge had two files to download, the first one was a screenshot of a message conversation.
 
 <figure>
         <img src="/assets/img/jersey24/challenge-image.png" alt="" />
@@ -74,18 +74,18 @@ John was able to decrypt the hash in a short time and obtain the password with w
 #### jctf{IMa_7aKe_I7_PER50nA11Y}
 ---
 #### NOTE:
-As a reminder when choosing a password, I always think of this cartoon that has been published for 13 years now
+As a reminder when choosing a password, I always think of this [xkcd](https://xkcd.com/) comic that has been published for 13 years now!!!
 
 <figure>
         <img src="https://imgs.xkcd.com/comics/password_strength.png" alt="" />
         <figcaption>password_strength</figcaption>
 </figure>
 
-[Explain Password Strenght](https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength)
+[Explain Password Strength](https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength)
 
 
 - - -
-Thanks to [JerseyCTF Team](https://www.jerseyctf.com), for once again doing an excellent job! 
+Thanks to [JerseyCTF Team](https://www.jerseyctf.com), once again doing an excellent job, kudos for the whole team! 
 
 For fun and knowledge, always think out of the box! :)
 
