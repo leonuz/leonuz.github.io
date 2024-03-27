@@ -5,7 +5,7 @@ date:   2024-03-23
 image: /jersey24/logo.png
 ---
 
-<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in it's IV edition, with a total of 65 challenges so that players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity and elegance, since many are unaware that it is possible to attack passwords using custom dictionaries, so we must be very careful with the information we share on social networks!</p>
+<p class="intro"><span class="dropcap">O</span>nce again <a href="https://www.jerseyctf.com/">JerceyCTF</a> returns in its IV edition, with a total of 65 challenges so that more than 1600 players in more than 870 teams participated in this event, players of all categories from beginners to experts could enjoy 24 hours of entertainment. I chose this challenge for the write-up because of its simplicity since many people are unaware that it is possible to create custom unique password candidates based on personal details like birthdays and names, so we must be cautious with the information we share on social networks, and most importantly, we must know how to choose our passwords very well!</p>
 
 #### Challenge Description: 
 
