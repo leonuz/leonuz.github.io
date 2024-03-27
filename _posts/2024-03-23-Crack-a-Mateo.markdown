@@ -72,6 +72,16 @@ John was able to decrypt the hash in a short time and obtain the password with w
 
 
 #### jctf{IMa_7aKe_I7_PER50nA11Y}
+---
+## NOTE:
+As a reminder when choosing a password, I always think of this cartoon that has been published for 13 years now
+
+<figure>
+        <img src="https://imgs.xkcd.com/comics/password_strength.png" alt="" />
+        <figcaption>password_strength</figcaption>
+</figure>
+
+[Explain Password Strenght](https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength)
 
 
 - - -
