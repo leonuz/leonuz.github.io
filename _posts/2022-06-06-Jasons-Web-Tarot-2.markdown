@@ -33,7 +33,7 @@ Let's start intercepting traffic using [Burpsuite](https://portswigger.net/burp)
 
 <figure>
         <img src="/assets/img/bcactf22/Burp-captura_token.png" alt="" />
-        <figcaption>Trafic Intercepted</figcaption>
+        <figcaption>Traffic Intercepted</figcaption>
 </figure>
 
 We can see a token, a [JSON Web Token](https://jwt.io/introduction)  
@@ -63,7 +63,7 @@ Hash-based Message Authentication Code (HMAC) is an algorithm that combines a ce
 ### Brute Forcing a HS256 JSON Web Token
 As secure as HS256 is, especially when implemented the right way, brute-forcing a JSON Web Token signed with small and medium sized shared-secrets using HS256 is still very possible.
 
-Using [Jonh the Ripper](https://www.openwall.com/john/) (or any other tools) we can find the secret key of a HS256 JSON Web token.
+Using [John the Ripper](https://www.openwall.com/john/) (or any other tool) we can find the secret key of a HS256 JSON Web Token.
 
 We have the original token:
 
@@ -93,9 +93,9 @@ Session completed.
 
 {%- endhighlight -%}
 
-Now we know that `38r4` its the key for signing the JWT
+Now we know that `38r4` is the key for signing the JWT.
 
-Know we can change the paylod part in the JWT using [jwt.io](https://jwt.io), and signing the JWT with the found key.  
+Now we can change the payload part in the JWT using [jwt.io](https://jwt.io), signing it with the found key.  
 
 
 <figure>

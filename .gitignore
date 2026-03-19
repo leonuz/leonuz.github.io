@@ -5,3 +5,5 @@ _site
 node_modules
 .jekyll-cache/
 .jekyll-cache/*
+.gitcred
+CORRECTIONS.md

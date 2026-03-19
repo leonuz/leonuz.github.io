@@ -36,9 +36,9 @@ We now know that it is a Windows based operating system (Win7SP1x64) we start ou
         <figcaption>windows.hashdump</figcaption>
 </figure>
 
-Now we know that the username **tinfoil** is in the system, this is an important clue as we know that tinfoil is used to elaborate [tinfoil hat](https://dictionary.cambridge.org/us/dictionary/english/tinfoil-hat) which is associated when talking about people who believe in conspiracy theories, furthermore we know that the memory dump is from a laptop belonging to a conspiracy nut, so we already know the username of our "friend".
+Now we know that the username **tinfoil** is in the system. This is an important clue: tinfoil is used to make a [tinfoil hat](https://dictionary.cambridge.org/us/dictionary/english/tinfoil-hat), which is associated with people who believe in conspiracy theories. Furthermore, we know that the memory dump is from a laptop belonging to a conspiracy nut, so we already know the username of our "friend".
 
-We also managed to crack (using [Jhon the Ripper](https://github.com/openwall/john))  the **tinfoil** password in case we need it later in the investigation.
+We also managed to crack (using [John the Ripper](https://github.com/openwall/john)) the **tinfoil** password in case we need it later in the investigation.
 
 {%- highlight bash -%}
 ┌──(leonuz㉿sniperhack)-[~/Downloads/ctf/space23]
@@ -99,7 +99,7 @@ For the next step we do a [windows.netscan](https://volatility3.readthedocs.io/e
 
 Now we know that **Firefox** is the application that we must investigate in depth, we begin to dump all the processes associated with **Firefox** in order to investigate each one of them. There are 12 processes in total identified with PID 1936, 2404, 1344, 2772, 1608, 800, 2532, 880, 2332, 1964, 3128, 3240. We use the module named [windows.memmap](https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.memmap.html)
 
-After some time we found that PID 880 contains the information we are looking for, the "evidence" that our "friend" preaching about.
+After some time we found that PID 880 contains the information we are looking for, the "evidence" that our "friend" was preaching about.
 
 {%- highlight bash -%}
 ┌──(leonuz㉿sniperhack)-[~/Downloads/ctf/space23]

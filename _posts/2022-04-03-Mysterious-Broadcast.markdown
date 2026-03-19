@@ -51,7 +51,7 @@ We see that what is inside the `~` is repeated, it is a message that repeats. We
 └─$ echo "1100011011001011010001101010110010010001111011010011011110100011011000100111011010101100001101011111011001001010110001101100001000101011001110100011101101110110001100001010101011001110100101101000110001011011011010010110100011000111101101101001001110011000011110011101111010111101" > sequence.in 
 ```
 
-We know from the statement of the problem that **There used to be 8 ..... but now there are only 7**, then we proceed to arrenge the `sequence.in` file,
+We know from the statement of the problem that **There used to be 8 ..... but now there are only 7**, then we proceed to arrange the `sequence.in` file,
 for this, we use the linux commands [`fold`](https://linux.die.net/man/1/fold) and [`tr`](https://linux.die.net/man/1/tr) 
 
 ```bash

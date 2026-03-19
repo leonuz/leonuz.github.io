@@ -43,12 +43,12 @@ let's go to that restricted address:
         <figcaption>flag.php(filtered)</figcaption>
 </figure>
 
-So, the application detected the entry, and the filter give us `“How do you filter you coffe”` on page.    
+The application detected the entry, and the filter gives us `”How do you filter your coffee?”` on the page.    
 At this point we know that, in order to get the flag, we need bypass the protection filter, and for that we need some techniques to recover the flag.  
 
 Let's keep on digging...  
 
-If we done a web app security assessment, found that the site may be vulnerable to a Local File Inclusion [LFI](https://www.aptive.co.uk/blog/local-file-inclusion-lfi-testing/) vulnerability.    
+If we perform a web app security assessment, we find that the site may be vulnerable to a Local File Inclusion [LFI](https://www.aptive.co.uk/blog/local-file-inclusion-lfi-testing/) vulnerability.    
 
 *LFI vulnerabilities are typically easy to identify and exploit. Any script that includes a file from a web server is a good candidate for further LFI testing.*  
 

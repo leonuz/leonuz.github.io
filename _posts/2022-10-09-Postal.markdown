@@ -4,7 +4,7 @@ title:  "POSTAL (Misc Challenge Writeup) -- CTF GDG Algiers 2022"
 date:   2022-10-09
 image: /gdgalgiers/logo.png
 ---
-<p class="intro"><span class="dropcap">T</span>he <a href="https://www.gdgalgiers.com//">GDG Algiers</a> one of the largest community of developers and tech enthusiasts in Algeria and MENA region, has organized the first edition of the GDG Algiers CTF. Competition started October 7 and finish 48 hours later. Was a very fun and hard CTF, with some medium challenges. Very good infra and support. We chose the "misc" category challenge called "POSTAL" because its solution involves a number of specific techniques related to osint, forensics and cryptography.</p>
+<p class="intro"><span class="dropcap">T</span>he <a href="https://www.gdgalgiers.com//">GDG Algiers</a> one of the largest community of developers and tech enthusiasts in Algeria and MENA region, has organized the first edition of the GDG Algiers CTF. Competition started October 7 and finished 48 hours later. It was a very fun and hard CTF, with some medium challenges. Very good infra and support. We chose the "misc" category challenge called "POSTAL" because its solution involves a number of specific techniques related to osint, forensics and cryptography.</p>
 
 
 #### Challenge Description: 
@@ -32,7 +32,7 @@ We notice some strange barcodes in the upper left part of the image that catches
 </figure>
 
 So, after rereading the challenge, we do the search again but this time focusing on barcodes in Australia and looking for the challenge "Going Postal" from "DaVinciCTF 2022" (hint from the challenge description) we knew that the estrange barcode it's indeed an *Australia Post 4 state barcode*. 
-We find this page [AusPost](http://bobcodes.weebly.com/auspost.html) very usefull to solve this part of the challenge 
+We find this page, [AusPost](http://bobcodes.weebly.com/auspost.html), very useful for solving this part of the challenge 
 
 Using the instructions to decode the barcode with the online tool we have this:
 
@@ -41,7 +41,7 @@ Using the instructions to decode the barcode with the online tool we have this:
         <figcaption>Barcode Decode</figcaption>
 </figure>
 
-Ok, know we have some info, but what could we do whit that?
+OK, now we have some info, but what could we do with that?
 
 We inspect our original image (`msg.jpg`) looking for some embedded file:
 
@@ -56,7 +56,7 @@ StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
         Encryption Mode:      cbc
 {%- endhighlight -%}
 
-And we find that inside the image has a encrypted file encoded by steghide 
+And we find that inside the image there is an encrypted file hidden by steghide 
 
 Using the information we obtained from the [AusPost](http://bobcodes.weebly.com/auspost.html) page, specifically the "Classification Code" *(K4N64r00zz)* as passphrase, we are able to extract the file hidden inside the image
 
@@ -76,7 +76,7 @@ When inspecting the file we notice that it is encrypted.
 Treasure.zip: Zip archive data, at least v2.0 to extract, compression method=AES Encrypted
 {%- endhighlight -%}
 
-We need to crack it, for that we will use [Jhon the Ripper](https://www.openwall.com/john)  
+We need to crack it; for that we will use [John the Ripper](https://www.openwall.com/john)  
 But we must first get the hash of the zip file  
 
 {%- highlight bash -%}
@@ -84,7 +84,7 @@ But we must first get the hash of the zip file
 └─$ zip2john Treasure.zip > postal.hash
 {%- endhighlight -%}
 
-and then proceed whit the crack
+and then proceed with the cracking
 
 {%- highlight bash -%}
 ┌──(leonuz㉿sniperhack)-[~/…/ctf/gdgalgiers/misc/postal]
@@ -132,7 +132,7 @@ findme  flag.txt.gpg  Treasure.zip
 
 {%- endhighlight -%}
 
-Inside the file call "findme" we have a hint
+Inside the file called "findme" we have a hint
 
 {%- highlight txt -%}
 ┌──(leonuz㉿sniperhack)-[~/ctf/gdgalgiers/misc/postal]

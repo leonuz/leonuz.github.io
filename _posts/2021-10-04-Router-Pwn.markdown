@@ -26,7 +26,7 @@ Now let's get started.
         <figcaption>Challenge 1</figcaption>
 </figure>
 
-We know for sure, that in the pcap file has some [HSRP](https://community.cisco.com/t5/networking-documents/hsrp-overview-and-basic-configuration/ta-p/3131590) comunication, and we know too that (thanks to this [tweet](https://twitter.com/_johnhammond/status/1246427342894968832?lang=en)) we can use pcap2john.py, to extract the hash for the encrypted HSRP channel and then pass it to a cracking tool (John the Ripper or Hashcat).
+We know for sure, that in the pcap file has some [HSRP](https://community.cisco.com/t5/networking-documents/hsrp-overview-and-basic-configuration/ta-p/3131590) communication, and we also know that (thanks to this [tweet](https://twitter.com/_johnhammond/status/1246427342894968832?lang=en)) we can use pcap2john.py, to extract the hash for the encrypted HSRP channel and then pass it to a cracking tool (John the Ripper or Hashcat).
 
 {%- highlight bash -%}
 ┌──(leonuz㉿sniper)-[~/CTFs/DEFCON29_RedTeamVillage_Quals/Router-Pwn]
@@ -68,11 +68,11 @@ Flag #1: catch22$
 
 From the pcap file we were able to extract the router configuration file, specifically the startup-config (Fig 2).
 
-(Wireshark -> File -> Export Objets -> TFTP -> Save)
+(Wireshark -> File -> Export Objects -> TFTP -> Save)
 
 <figure>
         <img src="/assets/img/tftp.png" alt="" />
-        <figcaption>Fig 2.- Wiresharks Export TFTP Objets List</figcaption>
+        <figcaption>Fig 2.- Wireshark's Export TFTP Objects List</figcaption>
 </figure>
 
 We reviewed the startup-config and found the next lines particularly interesting after reading [more info](https://networklessons.com/cisco/ccie-routing-switching/hsrp-hot-standby-routing-protocol) about HSRP, which is what challenges 2 and 3 are all about. 
@@ -91,7 +91,7 @@ interface GigabitEthernet1
 !
 {%- endhighlight -%}
 
-By studying this Cisco document [Configuring HSRP](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3560/software/release/12-1_19_ea1/configuration/guide/3560scg/swhsrp.pdf), we know that the above lines, contain information to obtain the "HSRP group" and the "HSRP virtual address" whitch are the flags from the challenges 2 and 3. 
+By studying this Cisco document [Configuring HSRP](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3560/software/release/12-1_19_ea1/configuration/guide/3560scg/swhsrp.pdf), we know that the above lines, contain information to obtain the "HSRP group" and the "HSRP virtual address" which are the flags from challenges 2 and 3. 
 
 ``` 
 Flag #2: thebruceleeband
@@ -101,7 +101,7 @@ Flag #3: 10.13.37.101
 
 <figure>
         <img src="/assets/img/vip.png" alt="" />
-        <figcaption>Fig 3 .- HSRP Virtul IP Address</figcaption>
+        <figcaption>Fig 3.- HSRP Virtual IP Address</figcaption>
 </figure>
 <figure>
         <img src="/assets/img/rp45.png" alt="" />
@@ -133,7 +133,7 @@ enable password 7 06140A24404C001E031E0103
 !
 ```
 
-for cracking the "enable password" we know this tool [ciscot7](https://github.com/theevilbit/ciscot7), we install it, run it and get the decrypted password which is our flag 4.
+For cracking the "enable password" we use this tool [ciscot7](https://github.com/theevilbit/ciscot7), we install it, run it and get the decrypted password which is our flag 4.
 
 
 ``` bash
@@ -167,7 +167,7 @@ To start cracking it we first need to "assemble" the hash, we do that as follows
 └─$ echo 'enablesecret:$8$uazfxavvplFUvE$Ms16BRtAFP9cdjqf240xdHgcddNxS.V39W6zy7jz3tc' > enablesecret.hash
 ```
 
-and then, knowing the type of encryption used by the Cisco type 8 password, we proceed to crack it using Jhon the ripper.
+and then, knowing the type of encryption used by the Cisco type 8 password, we proceed to crack it using John the Ripper.
 
 
 ```bash
@@ -213,7 +213,7 @@ From the config-startup file we have:
 username zzyzzx privilege 15 secret 5 $1$qdkB$TJp7PCYE.5UWYce9GyElJ0
 username rayhan privilege 14 secret 9 $9$sBkPUtoEWx6hxl$cU3orT6Y9btuI98Abtyy4ROKbplFBnVMnDEuXI9gF1E
 ```
-Let's use the table above to know the parameters that we are going to pass to Jhon the Ripper to crack the passwords we are asked for. We start assembling the hashes for each one.
+Let's use the table above to know the parameters that we are going to pass to John the Ripper to crack the passwords we are asked for. We start assembling the hashes for each one.
 
 
 ```bash
@@ -222,7 +222,7 @@ echo 'zzyzzx:$1$qdkB$TJp7PCYE.5UWYce9GyElJ0' > zzyzzx.hash
 echo 'rayhan:$9$sBkPUtoEWx6hxl$cU3orT6Y9btuI98Abtyy4ROKbplFBnVMnDEuXI9gF1E' > rayhan.hash
 ```
 
-having the hashes we proceed to crack the passwords using Jhon the ripper
+Having the hashes, we proceed to crack the passwords using John the Ripper
 
 
 ```bash
@@ -291,4 +291,4 @@ Flag # 7: thespecials
 ```
 
 ## To be continued
-**This challenge has a total of 13 flag**
+**This challenge has a total of 13 flags**

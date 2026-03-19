@@ -44,9 +44,9 @@ To decode the header and payload parts we use a web tool called [jwt.io](https:/
         <figcaption>jwt_io</figcaption>
 </figure>
 
-Like the [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, and now clearer by the revision of script.js, we need to become subscribed users to the application, to do this, we need to change (in the JWT) the value of the `"isSubscriber"` variable from its current value, `False`, to a new one, `True` in order to obtein the flag.
+Like the [Jason's Web Tarot 2](https://leonuz.github.io/blog/Jasons-Web-Tarot-2/) challenge, and now clearer by the revision of script.js, we need to become subscribed users to the application, to do this, we need to change (in the JWT) the value of the `"isSubscriber"` variable from its current value, `False`, to `True`, in order to obtain the flag.
 
-In the review of the package.json file, we notice that the *jsonwebtoken* version its 3.2.2, this version its outdated and vulnerable!!
+In the review of the package.json file, we notice that the *jsonwebtoken* version is 3.2.2 — this version is outdated and vulnerable!!
 
 <figure>
         <img src="/assets/img/bcactf22/CVE-2015-9235.png" alt="" />

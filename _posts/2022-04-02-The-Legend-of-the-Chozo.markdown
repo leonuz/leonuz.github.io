@@ -4,10 +4,10 @@ title:  "The Legend of the Chozo (Forensic Challenge Writeup) -- Space Heroes CT
 date:   2022-04-02
 image: spaceheroes.png
 ---
-<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. This challenges have been very interesting, because it allows to demonstrate techniques used in forensic investigations for the reconstruction of files of a specific format.
+<p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. These challenges have been very interesting, because they allow us to demonstrate techniques used in forensic investigations for the reconstruction of files of a specific format.
 </p>
 
-File recovery is one of the stages in computer forensic investigative process to identify an acquired file to be used as digital evident. The recovery is performed on files that have been deleted from a file system or intentionally destroyed/modified.
+File recovery is one of the stages in computer forensic investigative process to identify an acquired file to be used as digital evidence. The recovery is performed on files that have been deleted from a file system or intentionally destroyed/modified.
 
 This challenge is perfect to analyze in depth the different components that PNG files have and learn how to reassemble these components to reconstruct the evidence and process it (read the flag).
  
@@ -28,7 +28,7 @@ We were given a file to download ([source here](https://github.com/leonuz/CTFs/r
 total 64
 -rw-r--r-- 1 leonuz leonuz 61816 Feb  6 18:48 CorruptedData.chr
 ```
-Start by analyzing this file whit the unix/linux command [`file`](https://linux.die.net/man/1/file)
+Start by analyzing this file with the unix/linux command [`file`](https://linux.die.net/man/1/file)
 
 ```bash
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
@@ -57,13 +57,13 @@ According to the [PNG Specification](http://www.libpng.org/pub/png/spec/1.2/PNG-
 
 **PNG header:** `89 50 4E 47 0D 0A 1A 0A` + chunk + chunk + chunk...
 
-so let's go ahead and fix that. But first we make a copy of the file and change the file extension to .png
+So let's go ahead and fix that. But first, we make a copy of the file and change its extension to .png
 
 ```bash
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
 └─$ cp CorruptedData.chr image.png         
 ```
-we use [printf](https://man7.org/linux/man-pages/man3/printf.3.html) and [dd](https://man7.org/linux/man-pages/man1/dd.1.html) to modify the file, but it can be done with any hexadecimal editor such as hexeditor or xxd                                                                                                                                                                   
+We use [printf](https://man7.org/linux/man-pages/man3/printf.3.html) and [dd](https://man7.org/linux/man-pages/man1/dd.1.html) to modify the file, but it can also be done with any hexadecimal editor such as hexeditor or xxd.
 ```bash                        
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
 └─$ printf '\x89\x50\x4E\x47\x0D\x0A\x1A\x0A' | dd of=image.png bs=1 seek=0 count=8 conv=notrunc
@@ -71,7 +71,7 @@ we use [printf](https://man7.org/linux/man-pages/man3/printf.3.html) and [dd](ht
 8+0 records out
 8 bytes copied, 0.000204744 s, 39.1 kB/s
 ```
-review the header... we see something odd in the chunk section.
+Review the header — we see something odd in the chunk section.
 
 ```bash
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
@@ -87,14 +87,14 @@ review the header... we see something odd in the chunk section.
 00000080  00 f0 e1 49 44 41 54 78  5e ec fd 01 b4 66 59 76  |...IDATx^....fYv|
 00000090  d7 87 dd b1 1e 52 31 2a  0d 4f f0 92 55 8a 0b 5c  |.....R1*.O..U..\|
 ```
-check the file...
+Check the file...
 
 ```bash
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
 └─$ file CorruptedData.chr    
 CorruptedData.chr: data
 ```
-`file` won't recognize it yet, so we need continue fix it.
+`file` won't recognize it yet, so we need to continue fixing it.
 
 We know that after the header come a series of [chunks](http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html). PNG contains two types of chunks: one called critical chunks that are the standard chunks, another called ancillary chunks that are optional.  
 
@@ -107,7 +107,7 @@ Each chunk starts with 4 bytes for the length of the chunk, 4 bytes for the type
 8+0 records out
 8 bytes copied, 7.9847e-05 s, 100 kB/s
 ```
-check the header, everything seems to be fine now...
+Check the header — everything seems to be fine now...
 
 ```bash
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
@@ -124,7 +124,7 @@ check the header, everything seems to be fine now...
 00000090  d7 87 dd b1 1e 52 31 2a  0d 4f f0 92 55 8a 0b 5c  |.....R1*.O..U..\|
 
 ```                                                                                                                                                                    
-check the file again...
+Check the file again...
 
 ```bash                       
 ┌──(leonuz㉿sniper)-[~/SpaceHeroesCTF/Forensics/The_Legend_of_the_Chozo]
@@ -155,7 +155,7 @@ No errors detected in image.png (7 chunks, 79.4% compression).
 ```
 `pngcheck` has No errors detected!!!
 
-We fix the file and now its posible to open to get the flag.
+We fix the file and now it's possible to open it to get the flag.
 
 <figure>
         <img src="/assets/img/flag.png" alt="" />

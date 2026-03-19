@@ -4,7 +4,7 @@ title:  "Exfiltration d'agent (Network Challenge Writeup) -- Midnightflag INFEKT
 date:   2022-04-24
 image: /midnightflag/midnightflag.png
 ---
-<p class="intro"><span class="dropcap">M</span>idnightflag Team has elaborated a very entertaining and fun CTF named INFEKTION with a specific theme and even an excellent an spectacular <a href="https://www.youtube.com/watch?v=H_FT7KB74KU">Teaser</a> too. We are especially interested in the forensic and networking challenges, particularly this networking challenge seemed very interesting for dealing with information exfiltration issues.</p>
+<p class="intro"><span class="dropcap">M</span>idnightflag Team has put together a very entertaining and fun CTF named INFEKTION with a specific theme and even an excellent and spectacular <a href="https://www.youtube.com/watch?v=H_FT7KB74KU">Teaser</a>. We are especially interested in the forensic and networking challenges, particularly this networking challenge seemed very interesting for dealing with information exfiltration issues.</p>
 
  
 Challenges Description:
@@ -83,7 +83,7 @@ MCTF{g00d_0ld_1cmp_pr070c0l}
 ### Final Notes.
 
 
-Thanks [MidnightFlag Team](https://midnightflag.fr/) for the oportunity of a excellent CTF.  
+Thanks to the [MidnightFlag Team](https://midnightflag.fr/) for the opportunity of an excellent CTF.  
 Give us more time for the next CTF please!!
 
 For fun and knowledge, always think out of the box! :)

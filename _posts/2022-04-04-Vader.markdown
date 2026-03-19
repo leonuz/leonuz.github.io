@@ -7,7 +7,7 @@ image: spaceheroes.png
 <p class="intro"><span class="dropcap">F</span>ITSEC Team from <a href="https://research.fit.edu/fitsec/">Florida Tech</a> has done an excellent job preparing this CTF. These two challenges have one thing in common and that is that they can be solved using automated tools! <strong>This is a UNINTENDED Solution.</strong></p>
 
 
-### This is a UNINTENDED Solution for this two challenges.
+### This is an UNINTENDED Solution for these two challenges.
 
 
 Challenges Description:
@@ -17,7 +17,7 @@ Challenges Description:
         <figcaption>PWN Challenges</figcaption>
 </figure>
 
-If you see close, you note that both challenge has the same address, same port, and most important, the same binary!!
+If you look closely, you'll notice that both challenges have the same address, same port, and most importantly, the same binary!!
 
 I will use an automated tool for CTF PWN resolution challenges called [AUTOROP](https://autorop.readthedocs.io/en/latest/)
 
@@ -187,7 +187,7 @@ $
 - - -
 ### Final Notes.
 
-An excellent engineering professor taught me that **"As an engineers we can't know ALL the answers, but we should know how to look for them"**.
+An excellent engineering professor taught me: **"As engineers, we can't know ALL the answers, but we should know how to look for them."**
 
 - - -
 

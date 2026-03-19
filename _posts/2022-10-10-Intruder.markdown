@@ -4,7 +4,7 @@ title:  "Intruder (Misc Challenge Writeup) -- CTF GDG Algiers 2022"
 date:   2022-10-10
 image: /gdgalgiers/logo.png
 ---
-<p class="intro"><span class="dropcap">T</span>he <a href="https://www.gdgalgiers.com//">GDG Algiers</a> one of the largest community of developers and tech enthusiasts in Algeria and MENA region, has organized the first edition of the GDG Algiers CTF. Competition started October 7 and finish 48 hours later. Was a very fun and hard CTF, with some medium challenges. Very good infra and support. We chose this misc challenge, because it's a clever way to hide info inside an image.</p>
+<p class="intro"><span class="dropcap">T</span>he <a href="https://www.gdgalgiers.com//">GDG Algiers</a> one of the largest community of developers and tech enthusiasts in Algeria and MENA region, has organized the first edition of the GDG Algiers CTF. Competition started October 7 and finished 48 hours later. It was a very fun and hard CTF, with some medium challenges. Very good infra and support. We chose this misc challenge, because it's a clever way to hide info inside an image.</p>
 
 
 #### Challenge Description: 
@@ -19,7 +19,7 @@ File to download ([source here](https://raw.githubusercontent.com/leonuz/CTFs/ma
 
 We start analyzing the image with Online Steganography tools as [aperisolve](https://www.aperisolve.com/) and [fotoforensics](https://fotoforensics.com/) and local tools as [stegsolve](https://wiki.bi0s.in/steganography/stegsolve/) and [zsteg](https://github.com/zed-0xff/zsteg)) without any apparent result.
 
-Then we started to analyze the file with a forensic tools called [binwalk](https://www.kali.org/tools/binwalk/) and these are the results:
+Then we started to analyze the file with a forensic tool called [binwalk](https://www.kali.org/tools/binwalk/) and these are the results:
 
 
 {%- highlight bash -%}

@@ -4,7 +4,7 @@ title:  "SECRET CONVE.RSA.TIONS (Crypto Writeup) -- Hacky Holidays - Unlock The 
 date:   2022-07-27
 image: /hackazon22/logo.png
 ---
-<p class="intro"><span class="dropcap">T</span>he third edition of the famous <a href="https://hackyholidays.io//">Deloitte Hacky Holidays CTF</a> competition start July 8 and finish July 26, 2022. This Year it's "Unlock the city!", It was 18 days of challenges, divided in 4 districts, 33 challenges in total, where 1242 active players tried to unlock the city. Very well elaborated with an excellent platform and well thought out challengess. We chose this CRYPTO challenge for the writeup because it's a very good practical example that no matter how many resources you have, a BAD implementation of an algorithm will always be a persistent threat to you.</p>
+<p class="intro"><span class="dropcap">T</span>he third edition of the famous <a href="https://hackyholidays.io//">Deloitte Hacky Holidays CTF</a> competition start July 8 and finish July 26, 2022. This Year it's "Unlock the city!", It was 18 days of challenges, divided in 4 districts, 33 challenges in total, where 1242 active players tried to unlock the city. Very well organized, with an excellent platform and well-thought-out challenges. We chose this CRYPTO challenge for the writeup because it's a very good practical example that no matter how many resources you have, a BAD implementation of an algorithm will always be a persistent threat to you.</p>
 
 
 #### Challenge Description: 
@@ -17,7 +17,7 @@ image: /hackazon22/logo.png
 File to download ([source here](https://raw.githubusercontent.com/leonuz/CTFs/main/stuff/message.txt))
 
 
-#### The begginig of the Investigation  
+#### The Beginning of the Investigation  
 We begin our analysis with the letter left by the **AI**. We open it, and this is its content:
 
 {%- highlight bash -%}
@@ -34,7 +34,7 @@ Welcome to HackyHolidays! Your Supersecret flag is 17695508757461547006374147264
 Everything indicates that the **AI** has encrypted the message using [RSA (Rivest, Shamir, & Adleman (public key encryption technology))](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). (in addition to the hint in the challenge title)
 
 Most of the RSA vulnerabilities have been due to poor implementation of the protocol by software designers.  
-One of the best known vulnerabilities is the **Factorisation attack**. (If attacker will able to know P and Q using N, then he could find out value of private key)  
+One of the best known vulnerabilities is the **Factorisation attack**. (if an attacker is able to determine P and Q from N, then they could find out the value of the private key)  
 
 Let's test to see if the **AI** made the same implementation mistake. For this, we use [factorDB](https://github.com/ihebski/factordb) that will allow us to obtain (if they exist) the primes of a number
 
@@ -43,7 +43,7 @@ Let's test to see if the **AI** made the same implementation mistake. For this, 
         <figcaption>Factorization  of N using factorDB</figcaption>
 </figure>
 
-Bingo! We have found that `N` is **fully factored**, so we know `p` and `q`. With these values we will determine a [totiem function](https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf) named `phi(n)` and of course `d` (the private key) which will give us access to the message encrypted by the **AI**.
+Bingo! We have found that `N` is **fully factored**, so we know `p` and `q`. With these values we will determine a [totient function](https://students.cs.byu.edu/~cs465ta/lectures/rsa_notes.pdf) named `phi(n)` and of course `d` (the private key) which will give us access to the message encrypted by the **AI**.
 
 
 #### Decryption Process
@@ -92,7 +92,7 @@ print("rsa_decode:   ",''.join([chr(x) for x in rsa_encode]))
 
 {%- endhighlight -%}
 
-First we need to iterate over the msg_encode list and convert each item, creating a new list, and them, we use the join method of the empty string to join all of the strings together 
+First, we need to iterate over the msg_encode list and convert each item, creating a new list. Then, we use the join method of the empty string to join all of the strings together 
 
 When we run the script and VOILA!! 
 
@@ -102,7 +102,7 @@ When we run the script and VOILA!!
 rsa_decode:    CTF{RSA_br0ken}
 {%- endhighlight -%}
 
-and thus we got the encrypted message left by the **IA**
+and thus we got the encrypted message left by the **AI**
 
 ###       CTF{RSA_br0ken}
 
