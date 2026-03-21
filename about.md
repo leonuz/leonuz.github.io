@@ -54,6 +54,7 @@ title: whoami
 	<h3>Email Security</h3>
 	<ul>
 		<li>Proofpoint</li>
+		<li>Microsoft Exchange</li>
 		<li>DMARC / SPF</li>
 	</ul>
 
