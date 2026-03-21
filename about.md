@@ -43,6 +43,7 @@ title: whoami
 	<ul>
 		<li>Microsoft Sentinel</li>
 		<li>Rapid7</li>
+		<li>Splunk</li>
 	</ul>
 
 	<h3>Endpoint Protection</h3>
