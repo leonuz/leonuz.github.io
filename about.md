@@ -60,6 +60,7 @@ title: whoami
 		<li>Research and writing instincts</li>
 		<li>Teacher at heart</li>
 		<li>Passion for learning</li>
+		<li>Founder of <a href="https://www.knowdefend.com" target="_blank">Defense Security LLC</a> — independent cybersecurity consulting</li>
 		<li>Proud husband and father of two</li>
 	</ul>
 
