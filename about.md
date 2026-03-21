@@ -37,6 +37,43 @@ title: whoami
 		<li>(ISC)² CISSP — Candidate (exam scheduled October 2026)</li>
 	</ul>
 
+	<h2>Technologies &amp; Platforms</h2>
+
+	<h3>SIEM &amp; Threat Detection</h3>
+	<ul>
+		<li>Microsoft Sentinel</li>
+		<li>Rapid7</li>
+	</ul>
+
+	<h3>Endpoint Protection</h3>
+	<ul>
+		<li>Microsoft Defender Suite</li>
+		<li>CrowdStrike</li>
+	</ul>
+
+	<h3>Email Security</h3>
+	<ul>
+		<li>Proofpoint</li>
+		<li>DMARC / SPF</li>
+	</ul>
+
+	<h3>Network Security</h3>
+	<ul>
+		<li>Cisco Umbrella SIG</li>
+		<li>Zero Trust Network Access (ZTNA)</li>
+	</ul>
+
+	<h3>Identity &amp; Cloud</h3>
+	<ul>
+		<li>Microsoft Entra</li>
+		<li>Microsoft Azure</li>
+	</ul>
+
+	<h3>ITSM</h3>
+	<ul>
+		<li>ServiceNow</li>
+	</ul>
+
 	<h2>Technical Skills</h2>
 	<ul>
 		<li>Red Team / Blue Team Operations</li>
