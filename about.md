@@ -60,6 +60,7 @@ title: whoami
 	<h3>Network Security</h3>
 	<ul>
 		<li>Cisco Umbrella SIG</li>
+		<li>Cisco Meraki</li>
 		<li>Zero Trust Network Access (ZTNA)</li>
 	</ul>
 
