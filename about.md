@@ -30,11 +30,11 @@ title: whoami
 	<h2>Certifications</h2>
 	<ul>
 		<li>(ISC)² CC — Certified in Cybersecurity</li>
-		<li>(ISC)² CISSP — Certified Information Systems Security Professional</li>
 		<li>CompTIA Security+</li>
 		<li>eCPPT — eLearnSecurity Certified Professional Penetration Tester</li>
 		<li>eJPT — eLearnSecurity Junior Penetration Tester</li>
 		<li>ITIL v4 Foundation</li>
+		<li>(ISC)² CISSP — Candidate (exam scheduled October 2026)</li>
 	</ul>
 
 	<h2>Technical Skills</h2>
