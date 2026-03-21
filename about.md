@@ -6,7 +6,7 @@ title: whoami
 <div class="post">
 	<h1 class="pageTitle">About Me</h1>
 
-	<p>I'm <strong>Leo</strong> — IT Security Engineer with over two decades in cybersecurity. Born and raised in Venezuela, based in the United States since December 2021.</p>
+	<p>I'm <strong>Leo</strong> — IT Security Engineer with over two decades in cybersecurity. Electrical Engineer with a Master's degree in Telecommunications from the <a href="https://www.ula.ve/" target="_blank">Universidad de los Andes</a> (Mérida, Venezuela). Based in the United States since December 2021.</p>
 
 	<p>My approach to security has always been dual: understand how attackers think, build better defenses. I've spent my career doing both — from training security professionals across Latin America to hunting threats and hardening systems in the field. These days I'm particularly focused on the intersection of <strong>AI and defensive security</strong>, and I'm in the final stages of building <a href="https://github.com/leonuz/pfchat" target="_blank">PfChat</a>, an <a href="https://github.com/openclaw" target="_blank">OpenClaw</a> skill that brings conversational AI to network security operations.</p>
 
