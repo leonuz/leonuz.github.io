@@ -55,6 +55,8 @@ title: whoami
 	<ul>
 		<li>Proofpoint</li>
 		<li>Microsoft Exchange</li>
+		<li>PowerDMARC</li>
+		<li>EasyDMARC</li>
 		<li>DMARC / SPF</li>
 	</ul>
 
