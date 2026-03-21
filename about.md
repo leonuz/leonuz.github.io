@@ -65,6 +65,8 @@ title: whoami
 		<li>Cisco Umbrella SIG</li>
 		<li>Cisco Meraki</li>
 		<li>Zero Trust Network Access (ZTNA)</li>
+		<li>Wireshark</li>
+		<li>Nmap</li>
 	</ul>
 
 	<h3>Identity &amp; Cloud</h3>
