@@ -1,0 +1,180 @@
+---
+layout: post
+title:  "Cold Wake (Forensic Challenge Writeup) -- JerseyCTF VI 2026"
+date:   2026-04-19
+image: /jersey26/logo.png
+---
+
+<p class="intro"><span class="dropcap">O</span>nce again, <a href="https://www.jerseyctf.com/">JerseyCTF</a> delivered a very entertaining set of challenges. This time I managed to solve all of the forensics challenges, and <code>Cold Wake</code> was especially memorable for me because it was the first one I solved for first blood.
+I picked this challenge for a write‑up because it does something I always enjoy in CTFs: it keeps a simple idea consistent from beginning to end. Three tapes, three hidden fragments, three different techniques. The challenge never becomes messy, and every step feels connected to the story.</p>
+
+
+#### Challenge Description:
+
+<figure>
+        <img src="/assets/img/jersey26/chall.png" alt="" />
+        <figcaption>Cold Wake</figcaption>
+</figure>
+
+This challenge had one file to download, a ZIP file that can be downloaded [here](https://github.com/leonuz/CTFs/raw/main/stuff/01-cold-Wake.zip)
+
+The archive `01-cold-Wake.zip` contained three files: `Tape1.jpg`, `Tape2.jpg`, and `Tape3.jpg`.
+
+The three provided images were:
+
+<figure>
+        <img src="/assets/img/jersey26/tapes.jpg" alt="" />
+        <figcaption>Tapes</figcaption>
+</figure>
+
+From the flag format we can infer that it consists of three parts, each one probably hidden in a different image, and together they form the complete flag.
+
+#### Tape1.jpg
+
+The first file is the easiest one, and it serves as a clean introduction to the challenge. Since it is a JPEG, the first thing I checked was the metadata.
+
+```bash
+┌──(leonuz㉿sniperhack)-[~/jerseyctf26/forensic/cold-wake]
+└─$ exiftool Tape1.jpg
+ExifTool Version Number         : 13.50
+File Name                       : Tape1.jpg
+Directory                       : .
+File Size                       : 124 kB
+File Modification Date/Time     : 2026:04:18 17:39:02-04:00
+File Access Date/Time           : 2026:04:19 15:38:59-04:00
+File Inode Change Date/Time     : 2026:04:19 15:38:40-04:00
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Big-endian (Motorola, MM)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : GRAVITY-WEAPON OS v1.3
+Modify Date                     : 1982:06:12 09:14:00
+Artist                          : Cold War Orbital Research Division
+Y Cb Cr Positioning             : Centered
+Exif Version                    : 0232
+Create Date                     : 1982:06:12 09:14:00
+Components Configuration        : Y, Cb, Cr, -
+Flashpix Version                : 0100
+Color Space                     : Uncalibrated
+Comment                         : ORBITAL LAB ARCHIVE :: SINGULARITY INIT SEGMENT :: SEQ=47291
+Image Width                     : 768
+Image Height                    : 432
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 768x432
+Megapixels                      : 0.332
+
+```
+That immediately reveals a useful comment:
+
+```text
+Comment : ORBITAL LAB ARCHIVE :: SINGULARITY INIT SEGMENT :: SEQ=47291
+```
+
+So the first part of the flag is:
+
+```text
+47291
+```
+
+This also validates our assumption of the intended structure of the challenge: each tape hides its fragment differently, so we should not expect the exact same technique every time.
+
+---
+
+#### Tape2.jpg
+
+The second tape is where the challenge moves into more traditional steganography territory. Metadata alone is not enough here, so the next step is to test for hidden content.
+
+The intended solve path is to use `stegseek` with `rockyou.txt`:
+
+```bash
+┌──(leonuz㉿sniperhack)-[~/jerseyctf26/forensic/cold-wake]
+└─$ stegseek --crack tape2.jpg /usr/share/wordlists/rockyou.txt
+StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
+
+[i] Found passphrase: "galaxy"
+
+[i] Original filename: "Tape2Paper_small.jpg".
+[i] Extracting to "tape2.jpg.out".
+
+```
+Now we have both the password and the extracted file. The recovered image looks like this:
+
+<figure>
+        <img src="/assets/img/jersey26/Tape2Paper_small.jpg" alt="" />
+        <figcaption>Tape 2 Extracted</figcaption>
+</figure>
+
+And it clearly shows the second segment of the flag:
+
+```text
+80536
+```
+
+---
+
+#### Tape3.jpg
+
+The last tape is my favorite part of the challenge because it rewards us for paying attention. Instead of forcing another password recovery step, it reuses the passphrase recovered from `Tape2.jpg`.
+
+So we can extract the hidden file with:
+
+```bash
+┌──(leonuz㉿sniperhack)-[~/jerseyctf26/forensic/cold-wake]
+└─$ steghide extract -sf Tape3.jpg -p galaxy
+wrote extracted data to "Tape3_small.mp3".
+
+```
+
+This time the hidden artifact is an MP3 file: [Tape3_small.mp3](https://github.com/leonuz/CTFs/raw/main/stuff/Tape3_small.mp3)
+
+That fits the challenge theme perfectly. Since the whole setup revolves around old cassette tapes, ending with an audio clue feels much more natural than hiding yet another text file or image.
+
+To recover the final segment, we can simply listen to the audio or transcribe it. Just for fun, I used Whisper locally:
+
+```bash
+┌──(leonuz㉿sniperhack)-[~/jerseyctf26/forensic/cold-wake]
+└─$ whisper Tape3_small.mp3 --model tiny --language English --task transcribe --fp16 False
+[00:00.000 --> 00:04.000]  1, 9, 4, 0, 8.
+
+```
+
+That gives us the last segment of the flag:
+
+```text
+19408
+```
+
+#### Flag
+
+Putting everything together:
+
+#### JCTF{47291-80536-19408}
+
+<figure>
+        <img src="/assets/img/jersey26/first_blood.png" alt="" />
+        <figcaption>First Blood</figcaption>
+</figure>
+---
+
+#### Final Thoughts
+
+I really liked this challenge. It starts with a simple metadata check, escalates into a stego crack, and then closes by reusing the same passphrase to reveal an audio clue. That makes the solve path feel coherent instead of random.
+
+I also think the atmosphere was very well done. The title, the three tapes, and the final voice-based clue all support the same cold sci-fi theme, which makes the challenge more memorable than a generic steganography task.
+
+Thanks again to the [JerseyCTF Team](https://www.jerseyctf.com) for putting together such a fun event. Solving all of the forensics challenges was already satisfying, and getting first blood on this one made it even better.
+
+For fun and knowledge, always keep digging a little deeper.
+
+<figure>
+        <img src="/assets/img/jersey26/score.png" alt="" />
+</figure>
+
+
