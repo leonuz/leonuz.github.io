@@ -16,7 +16,7 @@ I picked this challenge for a write‑up because it does something I always enjo
         <figcaption>Cold Wake</figcaption>
 </figure>
 
-This challenge had one file to download, a ZIP file that can be downloaded [here](https://github.com/leonuz/CTFs/raw/main/stuff/01-cold-Wake.zip)
+This challenge had one file to download, a ZIP file that can be downloaded [here](https://github.com/leonuz/CTFs/bolb/main/stuff/01-cold-Wake.zip)
 
 The archive `01-cold-Wake.zip` contained three files: `Tape1.jpg`, `Tape2.jpg`, and `Tape3.jpg`.
 
@@ -132,7 +132,7 @@ wrote extracted data to "Tape3_small.mp3".
 
 ```
 
-This time the hidden artifact is an MP3 file: [Tape3_small.mp3](https://github.com/leonuz/CTFs/raw/main/stuff/Tape3_small.mp3)
+This time the hidden artifact is an MP3 file: [Tape3_small.mp3](https://github.com/leonuz/CTFs/blob/main/stuff/Tape3_small.mp3)
 
 That fits the challenge theme perfectly. Since the whole setup revolves around old cassette tapes, ending with an audio clue feels much more natural than hiding yet another text file or image.
 
