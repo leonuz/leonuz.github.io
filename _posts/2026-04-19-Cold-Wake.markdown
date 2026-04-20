@@ -5,7 +5,7 @@ date:   2026-04-19
 image: /jersey26/logo.png
 ---
 
-<p class="intro"><span class="dropcap">O</span>nce again, <a href="https://www.jerseyctf.com/">JerseyCTF</a> delivered a very entertaining set of challenges. This time I managed to solve all of the forensics challenges, and <code>Cold Wake</code> was especially memorable for me because it was the first one I solved for first blood.
+<p class="intro"><span class="dropcap">T</span>his year, <a href="https://www.jerseyctf.com/">JerseyCTF</a> came back with another solid lineup of challenges. This time I cleared nearly all of the forensics challenges, missing only the last two (<code>Saturn Colony</code> and <code>mars-dominion</code>) for lack of time, and <code>Cold Wake</code> was especially memorable for me because it was the first one I solved for first blood.
 I picked this challenge for a write‑up because it does something I always enjoy in CTFs: it keeps a simple idea consistent from beginning to end. Three tapes, three hidden fragments, three different techniques. The challenge never becomes messy, and every step feels connected to the story.</p>
 
 
